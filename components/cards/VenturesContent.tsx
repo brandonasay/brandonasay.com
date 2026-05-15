@@ -1,43 +1,41 @@
-import { ventures } from "@/components/resume/data";
+const homebakedBullets = [
+  "Built the best-in-class platform for home bakers to start and grow a micro-bakery.",
+  "Customers browse like a digital farmers market, buy homemade goods, and earn rewards.",
+];
 
 export default function VenturesContent() {
   return (
     <div className="py-8 space-y-5">
-      {ventures.map((v) => (
-        <div
-          key={v.company}
-          className="rounded-xl border border-white/10 bg-white/[0.02] p-6"
-        >
-          <div className="flex items-start justify-between gap-4 mb-4">
-            <div>
-              <h4 className="text-white font-bold text-lg">{v.company}</h4>
-              <p className="text-[#8aaf9f] text-sm mt-0.5">{v.title}</p>
-              <p className="text-zinc-500 text-sm">{v.dates}</p>
-            </div>
-            {v.link && (
-              <a
-                href={v.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shrink-0 text-sm text-[#8aaf9f] hover:underline font-medium"
-              >
-                {v.link.replace("https://", "")} ↗
-              </a>
-            )}
+      <div className="rounded-xl border border-[#8aaf9f]/30 bg-[#8aaf9f]/5 p-6">
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <h4 className="text-white font-bold text-lg">Homebakedapp.com</h4>
+            <p className="text-[#8aaf9f] text-sm mt-0.5">Co-Founder, CEO</p>
+            <p className="text-zinc-500 text-sm">Apr 2025 – Present</p>
           </div>
-          <ul className="space-y-2">
-            {v.bullets.map((b, i) => (
-              <li
-                key={i}
-                className="flex gap-2 text-zinc-400 text-sm leading-relaxed"
-              >
-                <span className="text-[#8aaf9f] shrink-0 mt-0.5">→</span>
-                {b}
-              </li>
-            ))}
-          </ul>
+          <a
+            href="https://homebakedapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 text-sm text-[#8aaf9f] hover:underline font-medium"
+          >
+            homebakedapp.com ↗
+          </a>
         </div>
-      ))}
+        <ul className="space-y-2">
+          {homebakedBullets.map((b, i) => (
+            <li key={i} className="flex gap-2 text-zinc-400 text-sm leading-relaxed">
+              <span className="text-[#8aaf9f] shrink-0 mt-0.5">→</span>
+              {b}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="rounded-xl border border-white/10 bg-white/[0.02] p-6 opacity-60">
+        <h4 className="text-zinc-400 font-semibold">Next Venture</h4>
+        <p className="text-zinc-600 text-sm mt-1 italic">Placeholder — add your next entrepreneurial project here.</p>
+      </div>
     </div>
   );
 }
