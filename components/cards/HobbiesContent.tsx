@@ -15,6 +15,11 @@ const slides = [
     src: "/hobby-bierstadt.jpg",
     caption: "I love art; this is an original from Albert Bierstadt I got to see in DC.",
   },
+  {
+    id: "hiking",
+    src: "/hobby-hiking.jpg",
+    caption: "Hiking with my kids",
+  },
 ];
 
 export default function HobbiesContent() {
