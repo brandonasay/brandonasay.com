@@ -25,6 +25,11 @@ const slides = [
     src: "/hobby-frankie.jpg",
     caption: "Carb loading with my daughter Frankie",
   },
+  {
+    id: "leavenworth",
+    src: "/hobby-leavenworth.jpg",
+    caption: "I love magical places; here is Leavenworth on Christmas Eve.",
+  },
 ];
 
 export default function HobbiesContent() {
