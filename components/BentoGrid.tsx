@@ -40,13 +40,13 @@ function Tile({
     <div
       className={`rounded-2xl flex flex-col ${className}`}
       style={{
-        border: `1px solid ${hex(color, 0.25)}`,
-        backgroundColor: hex(color, 0.06),
+        border: `1px solid ${hex(color, 0.6)}`,
+        backgroundColor: hex(color, 0.18),
       }}
     >
       <div
         className="px-6 pt-5 pb-2 shrink-0"
-        style={{ borderBottom: `1px solid ${hex(color, 0.18)}` }}
+        style={{ borderBottom: `1px solid ${hex(color, 0.4)}` }}
       >
         <h2
           className="font-semibold text-base tracking-tight"
