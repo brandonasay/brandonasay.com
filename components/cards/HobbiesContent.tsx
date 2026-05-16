@@ -10,7 +10,11 @@ const slides = [
     src: "/hobby-breakfast.jpg",
     caption: "Making Saturday breakfast for my kids",
   },
-  // Add more slides here
+  {
+    id: "bierstadt",
+    src: "/hobby-bierstadt.jpg",
+    caption: "I love art; this is an original from Albert Bierstadt I got to see in DC.",
+  },
 ];
 
 export default function HobbiesContent() {
