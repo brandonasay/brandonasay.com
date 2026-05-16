@@ -20,10 +20,10 @@ function Tile({
     <div
       className={`rounded-2xl border border-white/8 bg-white/[0.025] flex flex-col ${className}`}
     >
-      <div className="px-6 pt-5 pb-1 shrink-0">
-        <p className="text-[#8aaf9f] text-[10px] font-mono tracking-[0.18em] uppercase">
+      <div className="px-6 pt-5 pb-2 shrink-0 border-b border-white/6">
+        <h2 className="text-white font-semibold text-base tracking-tight">
           {label}
-        </p>
+        </h2>
       </div>
       <div className="flex-1 px-6 pb-6">{children}</div>
     </div>
