@@ -16,28 +16,28 @@ export default function TimelineEntry({
   return (
     <div className="relative pl-8">
       {!isLast && (
-        <div className="absolute left-[7px] top-6 bottom-0 w-px bg-white/10" />
+        <div className="absolute left-[7px] top-6 bottom-0 w-px bg-[#222725]/20" />
       )}
       <div
         className={`absolute left-0 top-1.5 h-3.5 w-3.5 rounded-full border-2 transition-colors duration-200 ${
           open
-            ? "border-[#8aaf9f] bg-[#8aaf9f]"
-            : "border-zinc-600 bg-[#0e1a14]"
+            ? "border-[#222725] bg-[#222725]"
+            : "border-[#222725]/40 bg-[#222725]/10"
         }`}
       />
 
       <button onClick={() => setOpen(!open)} className="w-full text-left group">
         <div className="flex items-start justify-between gap-4 py-1">
           <div>
-            <p className="text-white font-semibold group-hover:text-[#8aaf9f] transition-colors">
+            <p className="text-[#222725] font-semibold group-hover:text-[#222725]/70 transition-colors">
               {entry.company}
             </p>
-            <p className="text-zinc-400 text-sm mt-0.5">{entry.title}</p>
+            <p className="text-[#222725]/65 text-sm mt-0.5">{entry.title}</p>
           </div>
           <div className="flex items-center gap-3 shrink-0 pt-0.5">
-            <span className="text-zinc-500 text-sm">{entry.dates}</span>
+            <span className="text-[#222725]/50 text-sm">{entry.dates}</span>
             <span
-              className={`text-zinc-500 transition-transform duration-200 inline-block ${
+              className={`text-[#222725]/50 transition-transform duration-200 inline-block ${
                 open ? "rotate-180" : ""
               }`}
             >
@@ -60,9 +60,9 @@ export default function TimelineEntry({
               {entry.bullets.map((b, i) => (
                 <li
                   key={i}
-                  className="text-zinc-400 text-sm leading-relaxed flex gap-2"
+                  className="text-[#222725]/70 text-sm leading-relaxed flex gap-2"
                 >
-                  <span className="text-[#8aaf9f] mt-0.5 shrink-0">→</span>
+                  <span className="text-[#222725]/50 mt-0.5 shrink-0">→</span>
                   {b}
                 </li>
               ))}
@@ -72,7 +72,7 @@ export default function TimelineEntry({
                     href={entry.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#8aaf9f] text-sm hover:underline"
+                    className="text-[#222725]/70 text-sm hover:underline"
                     onClick={(e) => e.stopPropagation()}
                   >
                     {entry.link} ↗

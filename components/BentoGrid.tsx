@@ -7,22 +7,21 @@ import VenturesContent from "./cards/VenturesContent";
 import ProjectsContent from "./cards/ProjectsContent";
 import HobbiesContent from "./cards/HobbiesContent";
 
-// Muted jewel-tone palette — each hex applied at low opacity for bg/border tints
+// 4 muted tones distributed across 6 tiles so no adjacent tiles share a color
 const COLORS = {
-  work:     "#7fa8d0", // steel blue
-  education:"#c4a85a", // warm gold
-  novel:    "#c47a8e", // dusty rose
-  ventures: "#8aaf9f", // sage teal
-  projects: "#9b82cc", // soft violet
-  hobbies:  "#d4956a", // terracotta
+  work:      "#a1c5ce",
+  education: "#d8cf6f",
+  novel:     "#becf8c",
+  ventures:  "#abc4ac",
+  projects:  "#d8cf6f",
+  hobbies:   "#a1c5ce",
 };
 
-function hex(color: string, alpha: number) {
-  // Returns rgba() string for inline style tints
-  const r = parseInt(color.slice(1, 3), 16);
-  const g = parseInt(color.slice(3, 5), 16);
-  const b = parseInt(color.slice(5, 7), 16);
-  return `rgba(${r},${g},${b},${alpha})`;
+function darken(hex: string, amount: number) {
+  const r = Math.max(0, parseInt(hex.slice(1, 3), 16) - amount);
+  const g = Math.max(0, parseInt(hex.slice(3, 5), 16) - amount);
+  const b = Math.max(0, parseInt(hex.slice(5, 7), 16) - amount);
+  return `rgb(${r},${g},${b})`;
 }
 
 function Tile({
@@ -40,18 +39,15 @@ function Tile({
     <div
       className={`rounded-2xl flex flex-col ${className}`}
       style={{
-        border: `1px solid ${hex(color, 0.6)}`,
-        backgroundColor: hex(color, 0.18),
+        backgroundColor: color,
+        border: `1px solid ${darken(color, 30)}`,
       }}
     >
       <div
         className="px-6 pt-5 pb-2 shrink-0"
-        style={{ borderBottom: `1px solid ${hex(color, 0.4)}` }}
+        style={{ borderBottom: `1px solid ${darken(color, 25)}` }}
       >
-        <h2
-          className="font-semibold text-base tracking-tight"
-          style={{ color }}
-        >
+        <h2 className="font-semibold text-base tracking-tight text-[#222725]">
           {label}
         </h2>
       </div>

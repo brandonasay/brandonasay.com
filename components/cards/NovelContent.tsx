@@ -10,8 +10,8 @@ export default function NovelContent() {
     <div className="pt-3">
       <div className="grid grid-cols-2 gap-3">
         {books.map((book) => (
-          <div key={book.title} className="rounded-xl border border-[#8aaf9f]/30 bg-[#8aaf9f]/5 p-4 flex flex-col items-center">
-            <p className="text-white font-bold text-sm text-center mb-3 italic">{book.title}</p>
+          <div key={book.title} className="rounded-xl border border-[#222725]/20 bg-[#222725]/8 p-4 flex flex-col items-center">
+            <p className="text-[#222725] font-bold text-sm text-center mb-3 italic">{book.title}</p>
             <Image
               src={book.src}
               alt={`${book.title} book cover`}
