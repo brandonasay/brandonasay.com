@@ -32,9 +32,33 @@ export default function VenturesContent() {
         </ul>
       </div>
 
-      <div className="rounded-xl border border-white/10 bg-white/[0.02] p-6 opacity-60">
-        <h4 className="text-zinc-400 font-semibold">Next Venture</h4>
-        <p className="text-zinc-600 text-sm mt-1 italic">Placeholder — add your next entrepreneurial project here.</p>
+      <div className="rounded-xl border border-[#8aaf9f]/30 bg-[#8aaf9f]/5 p-6">
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <h4 className="text-white font-bold text-lg">Watchmaker Foundation</h4>
+            <p className="text-[#8aaf9f] text-sm mt-0.5">Founder</p>
+            <p className="text-zinc-500 text-sm">Jul 2017 – Present</p>
+          </div>
+          <a
+            href="https://watchmakerfoundation.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 text-sm text-[#8aaf9f] hover:underline font-medium"
+          >
+            watchmakerfoundation.org ↗
+          </a>
+        </div>
+        <ul className="space-y-2">
+          {[
+            "Nonprofit removing financial barriers for exceptional creators.",
+            "All proceeds from The Watchmaker and Power fund the foundation.",
+          ].map((b, i) => (
+            <li key={i} className="flex gap-2 text-zinc-400 text-sm leading-relaxed">
+              <span className="text-[#8aaf9f] shrink-0 mt-0.5">→</span>
+              {b}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
