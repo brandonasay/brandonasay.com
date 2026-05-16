@@ -72,7 +72,7 @@ export default function BentoGrid() {
         <Tile label="Ventures"             color={COLORS.ventures}  className="md:col-start-2 md:col-span-2 md:row-start-2">
           <VenturesContent />
         </Tile>
-        <Tile label="Claude Code Projects" color={COLORS.projects}  className="md:col-start-1 md:col-span-2 md:row-start-3">
+        <Tile label="Claude Code, Vercel, and Supabase Projects" color={COLORS.projects}  className="md:col-start-1 md:col-span-2 md:row-start-3">
           <ProjectsContent />
         </Tile>
         <Tile label="Hobbies & Interests"  color={COLORS.hobbies}   className="md:col-start-3 md:row-start-3">
