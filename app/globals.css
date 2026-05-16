@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0d1a24;
+  --background: #0a0a0a;
   --foreground: #e8e8e3;
 }
 
@@ -22,20 +22,3 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Fog drift animations */
-@keyframes fog-1 {
-  0%, 100% { transform: translateX(0) scaleX(1); opacity: 0.12; }
-  50%       { transform: translateX(5%) scaleX(1.06); opacity: 0.22; }
-}
-@keyframes fog-2 {
-  0%, 100% { transform: translateX(0); opacity: 0.08; }
-  50%       { transform: translateX(-4%) scaleX(0.94); opacity: 0.16; }
-}
-@keyframes fog-3 {
-  0%, 100% { transform: translateX(0); opacity: 0.06; }
-  50%       { transform: translateX(3%); opacity: 0.13; }
-}
-
-.fog-1 { animation: fog-1 14s ease-in-out infinite; transform-origin: center; }
-.fog-2 { animation: fog-2 21s ease-in-out infinite; transform-origin: center; }
-.fog-3 { animation: fog-3 17s ease-in-out infinite; transform-origin: center; }

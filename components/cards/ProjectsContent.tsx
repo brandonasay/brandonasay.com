@@ -9,7 +9,7 @@ const projects = [
   {
     name: "brandonasay.com",
     description:
-      "This portfolio site. The PNW landscape is procedurally generated — noise functions, canvas blur, and animated fog, all written with Claude Code.",
+      "This portfolio site. A bento-grid dashboard built end-to-end with Claude Code.",
     url: null,
     status: "live" as const,
   },
@@ -29,7 +29,7 @@ const projects = [
 
 export default function ProjectsContent() {
   return (
-    <div className="py-8">
+    <div className="pt-3">
       <p className="text-zinc-500 text-sm mb-6">
         Built with Claude Code as a creative and technical partner.
       </p>

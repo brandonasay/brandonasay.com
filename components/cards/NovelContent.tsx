@@ -1,6 +1,6 @@
 export default function NovelContent() {
   return (
-    <div className="py-8 space-y-5">
+    <div className="pt-3 space-y-5">
       <div className="rounded-xl border border-[#8aaf9f]/30 bg-[#8aaf9f]/5 p-6">
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>

@@ -58,7 +58,7 @@ export default function HobbiesContent() {
   const slide = slides[idx];
 
   return (
-    <div className="py-8">
+    <div className="pt-3">
       <div className="relative rounded-xl border border-white/10 overflow-hidden">
         <AnimatePresence mode="wait" custom={dir}>
           <motion.div

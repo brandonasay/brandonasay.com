@@ -2,7 +2,7 @@ import { education } from "@/components/resume/data";
 
 export default function EducationContent() {
   return (
-    <div className="py-8 space-y-4">
+    <div className="pt-3 space-y-4">
       {education.map((edu) => (
         <div
           key={edu.school}
