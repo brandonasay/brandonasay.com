@@ -28,9 +28,6 @@ const projects = [
 export default function ProjectsContent() {
   return (
     <div className="pt-3">
-      <p className="text-[#222725]/55 text-sm mb-4">
-        Built with Claude Code as a creative and technical partner.
-      </p>
       <div className="grid sm:grid-cols-2 gap-4">
         {projects.map((p, i) => (
           <div
