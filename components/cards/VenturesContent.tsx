@@ -32,7 +32,6 @@ export default function VenturesContent() {
             <div>
               <h4 className="text-[#222725] font-bold text-lg">{v.name}</h4>
               <p className="text-[#222725]/70 text-sm mt-0.5">{v.role}</p>
-              <p className="text-[#222725]/50 text-sm">{v.dates}</p>
             </div>
             <a
               href={v.url}

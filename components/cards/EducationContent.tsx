@@ -11,7 +11,6 @@ export default function EducationContent() {
           <p className="text-[#222725] font-bold text-lg">{edu.school}</p>
           <p className="text-[#222725]/70 text-sm mt-1">{edu.degree}</p>
           <p className="text-[#222725]/60 text-sm">{edu.focus}</p>
-          <p className="text-[#222725]/45 text-xs mt-2">{edu.dates}</p>
         </div>
       ))}
     </div>

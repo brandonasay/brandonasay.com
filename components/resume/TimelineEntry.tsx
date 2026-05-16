@@ -34,8 +34,7 @@ export default function TimelineEntry({
             </p>
             <p className="text-[#222725]/65 text-sm mt-0.5">{entry.title}</p>
           </div>
-          <div className="flex items-center gap-3 shrink-0 pt-0.5">
-            <span className="text-[#222725]/50 text-sm">{entry.dates}</span>
+          <div className="flex items-center shrink-0 pt-0.5">
             <span
               className={`text-[#222725]/50 transition-transform duration-200 inline-block ${
                 open ? "rotate-180" : ""
