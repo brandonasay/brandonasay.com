@@ -2,39 +2,16 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const slides = [
   {
-    id: "outdoors",
-    label: "Outdoors",
-    title: "The Pacific Northwest",
-    body: "Placeholder — hiking, skiing, kayaking, or whatever gets you outside in the PNW.",
+    id: "breakfast",
+    src: "/hobby-breakfast.jpg",
+    caption: "Making Saturday breakfast for my kids",
   },
-  {
-    id: "hobby2",
-    label: "Hobby",
-    title: "Placeholder",
-    body: "Add a hobby or interest here — a sentence or two about what you love doing.",
-  },
-  {
-    id: "hobby3",
-    label: "Interest",
-    title: "Placeholder",
-    body: "Add another interest here.",
-  },
-  {
-    id: "hobby4",
-    label: "Interest",
-    title: "Placeholder",
-    body: "Add another interest here.",
-  },
+  // Add more slides here
 ];
-
-const variants = {
-  enter: (d: number) => ({ x: d * 48, opacity: 0 }),
-  center: { x: 0, opacity: 1 },
-  exit: (d: number) => ({ x: d * -48, opacity: 0 }),
-};
 
 export default function HobbiesContent() {
   const [idx, setIdx] = useState(0);
@@ -50,55 +27,64 @@ export default function HobbiesContent() {
   const slide = slides[idx];
 
   return (
-    <div className="pt-3">
-      <div className="relative rounded-xl border border-[#222725]/20 overflow-hidden">
-        <AnimatePresence mode="wait" custom={dir}>
-          <motion.div
-            key={slide.id}
-            custom={dir}
-            variants={variants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.28, ease: "easeInOut" }}
-            className="p-6 bg-[#222725]/8"
-          >
-            <p className="text-[#222725]/55 text-xs font-mono tracking-widest uppercase mb-2">
-              {slide.label}
-            </p>
-            <h4 className="text-[#222725] font-bold text-lg mb-2">{slide.title}</h4>
-            <p className="text-[#222725]/65 leading-relaxed text-sm">{slide.body}</p>
-          </motion.div>
-        </AnimatePresence>
-
+    <div className="pt-3 flex flex-col items-center">
+      <div className="relative w-full flex items-center justify-center gap-3">
         <button
           onClick={prev}
           aria-label="Previous"
-          className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-[#222725]/15 text-[#222725]/60 hover:text-[#222725] hover:bg-[#222725]/25 transition-colors text-lg"
+          className="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-[#222725]/20 hover:bg-[#222725]/35 text-[#222725] text-2xl font-bold transition-colors"
         >
           ‹
         </button>
+
+        <div className="flex-1 overflow-hidden">
+          <AnimatePresence mode="wait" custom={dir}>
+            <motion.div
+              key={slide.id}
+              custom={dir}
+              initial={{ x: dir * 60, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: dir * -60, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="flex flex-col items-center"
+            >
+              <Image
+                src={slide.src}
+                alt={slide.caption}
+                width={800}
+                height={800}
+                className="rounded-lg shadow-lg w-full h-auto"
+              />
+              <p className="text-[#222725] font-bold text-base mt-4 text-center">
+                {slide.caption}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
         <button
           onClick={next}
           aria-label="Next"
-          className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full bg-[#222725]/15 text-[#222725]/60 hover:text-[#222725] hover:bg-[#222725]/25 transition-colors text-lg"
+          className="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-[#222725]/20 hover:bg-[#222725]/35 text-[#222725] text-2xl font-bold transition-colors"
         >
           ›
         </button>
       </div>
 
-      <div className="flex gap-2 justify-center mt-4">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => go(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`w-1.5 h-1.5 rounded-full transition-colors ${
-              i === idx ? "bg-[#222725]" : "bg-[#222725]/25 hover:bg-[#222725]/45"
-            }`}
-          />
-        ))}
-      </div>
+      {slides.length > 1 && (
+        <div className="flex gap-2 mt-4">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => go(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                i === idx ? "bg-[#222725]" : "bg-[#222725]/30 hover:bg-[#222725]/50"
+              }`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
