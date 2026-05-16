@@ -18,7 +18,6 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center">
-        <span className="text-white font-semibold tracking-tight">Brandon Asay</span>
       </div>
     </nav>
   );
