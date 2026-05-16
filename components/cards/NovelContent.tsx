@@ -4,17 +4,7 @@ export default function NovelContent() {
   return (
     <div className="pt-3 space-y-5">
       <div className="rounded-xl border border-[#8aaf9f]/30 bg-[#8aaf9f]/5 p-5">
-        <div className="flex items-start justify-between gap-2 mb-4">
-          <h4 className="text-white font-bold text-lg">The Watchmaker</h4>
-          <a
-            href="https://watchmakerfoundation.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 text-sm text-[#8aaf9f] hover:underline font-medium"
-          >
-            watchmakerfoundation.org ↗
-          </a>
-        </div>
+        <h4 className="text-white font-bold text-lg text-center mb-4">The Watchmaker</h4>
         <Image
           src="/watchmaker-cover.png"
           alt="The Watchmaker book cover"
