@@ -18,10 +18,10 @@ const projects = [
     status: "live" as const,
   },
   {
-    name: "Coming Soon",
-    description: "Something new in the works.",
-    url: null,
-    status: "soon" as const,
+    name: "Baking Encyclopedia",
+    description: "Soon to be the world's most comprehensive resource for home bakers, with zero ads and clutter.",
+    url: "https://bakingencyclopedia.com",
+    status: "live" as const,
   },
 ];
 
