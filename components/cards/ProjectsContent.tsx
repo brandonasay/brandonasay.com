@@ -1,7 +1,7 @@
 const projects = [
   {
     name: "What's the Best Movie Ever?",
-    description: "A movie recommendation engine for film lovers who actually have taste.",
+    description: "The best movies ever, ranked by real people. Rank your own top 10!",
     url: "https://whatsthebestmovieever.com",
     status: "live" as const,
   },
