@@ -12,10 +12,10 @@ const projects = [
     status: "live" as const,
   },
   {
-    name: "Coming Soon",
-    description: "Something new in the works.",
-    url: null,
-    status: "soon" as const,
+    name: "Watchmaker Foundation Site",
+    description: "The website for all-things related to my non-profit, Watchmaker Foundation.",
+    url: "https://watchmakerfoundation.org",
+    status: "live" as const,
   },
   {
     name: "Coming Soon",
