@@ -18,7 +18,7 @@ const ventures = [
     urlLabel: "watchmakerfoundation.org ↗",
     bullets: [
       "Nonprofit removing financial barriers for exceptional creators.",
-      "All proceeds from The Watchmaker and Power fund the foundation.",
+      "All sales proceeds from The Watchmaker fund the foundation",
     ],
   },
 ];
