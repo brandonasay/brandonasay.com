@@ -80,6 +80,11 @@ const slides = [
     src: "/hobby-haleakala.jpg",
     caption: "Traveling with friends. Here we're on top of Haleakala.",
   },
+  {
+    id: "college-football",
+    src: "/hobby-college-football.jpg",
+    caption: "Going to college football games",
+  },
 ];
 
 export default function HobbiesContent() {
