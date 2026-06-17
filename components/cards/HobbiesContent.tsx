@@ -85,6 +85,11 @@ const slides = [
     src: "/hobby-college-football.jpg",
     caption: "Going to college football games",
   },
+  {
+    id: "backpacking",
+    src: "/hobby-backpacking.jpg",
+    caption: "Backpacking. This is Timberline Trail, Mt Hood.",
+  },
 ];
 
 export default function HobbiesContent() {
