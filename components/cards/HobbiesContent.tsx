@@ -70,6 +70,11 @@ const slides = [
     src: "/hobby-rice-krispy.jpg",
     caption: "Making rice krispy treats (Yes, I made that!)",
   },
+  {
+    id: "triathlon",
+    src: "/hobby-triathlon.jpg",
+    caption: "Triathlons",
+  },
 ];
 
 export default function HobbiesContent() {
