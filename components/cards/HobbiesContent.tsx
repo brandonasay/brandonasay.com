@@ -40,6 +40,11 @@ const slides = [
     src: "/hobby-horses.jpg",
     caption: "Finding horses with my daughter (she wants one, but I'm not there yet)",
   },
+  {
+    id: "old-friends",
+    src: "/hobby-old-friends.jpg",
+    caption: "Catching up with old friends. Greg and Paddy, high school friends from London.",
+  },
 ];
 
 export default function HobbiesContent() {
