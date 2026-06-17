@@ -45,6 +45,11 @@ const slides = [
     src: "/hobby-old-friends.jpg",
     caption: "Catching up with old friends. Greg and Paddy, high school friends from London.",
   },
+  {
+    id: "trick-or-treat",
+    src: "/hobby-trick-or-treat.jpg",
+    caption: "Trick or treating with my son, Chet (he loves peanut butter on banana)",
+  },
 ];
 
 export default function HobbiesContent() {
