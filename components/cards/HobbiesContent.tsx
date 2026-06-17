@@ -30,6 +30,11 @@ const slides = [
     src: "/hobby-leavenworth.jpg",
     caption: "I love magical places; here is Leavenworth on Christmas Eve.",
   },
+  {
+    id: "ferry-puzzle",
+    src: "/hobby-ferry-puzzle.jpg",
+    caption: "Doing the puzzles on the WA State ferries",
+  },
 ];
 
 export default function HobbiesContent() {
