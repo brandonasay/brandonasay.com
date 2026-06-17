@@ -60,6 +60,11 @@ const slides = [
     src: "/hobby-travel-kids.jpg",
     caption: "Taking the kids new places",
   },
+  {
+    id: "building-chet",
+    src: "/hobby-building-chet.jpg",
+    caption: "Building things with Chet",
+  },
 ];
 
 export default function HobbiesContent() {
