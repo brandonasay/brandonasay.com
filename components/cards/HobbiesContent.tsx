@@ -35,6 +35,11 @@ const slides = [
     src: "/hobby-ferry-puzzle.jpg",
     caption: "Doing the puzzles on the WA State ferries",
   },
+  {
+    id: "horses",
+    src: "/hobby-horses.jpg",
+    caption: "Finding horses with my daughter (she wants one, but I'm not there yet)",
+  },
 ];
 
 export default function HobbiesContent() {
