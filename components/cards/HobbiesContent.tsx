@@ -2,44 +2,9 @@ import Image from "next/image";
 
 const slides = [
   {
-    id: "breakfast",
-    src: "/hobby-breakfast.jpg",
-    caption: "Making Saturday breakfast for my kids",
-  },
-  {
-    id: "bierstadt",
-    src: "/hobby-bierstadt.jpg",
-    caption: "I love art; this is an original from Albert Bierstadt I got to see in DC.",
-  },
-  {
-    id: "hiking",
-    src: "/hobby-hiking.jpg",
-    caption: "Hiking with my kids",
-  },
-  {
-    id: "frankie",
-    src: "/hobby-frankie.jpg",
-    caption: "Carb loading with my daughter Frankie",
-  },
-  {
-    id: "leavenworth",
-    src: "/hobby-leavenworth.jpg",
-    caption: "I love magical places; here is Leavenworth on Christmas Eve.",
-  },
-  {
-    id: "ferry-puzzle",
-    src: "/hobby-ferry-puzzle.jpg",
-    caption: "Doing the puzzles on the WA State ferries",
-  },
-  {
-    id: "horses",
-    src: "/hobby-horses.jpg",
-    caption: "Finding horses with my daughter (she wants one, but I'm not there yet)",
-  },
-  {
-    id: "old-friends",
-    src: "/hobby-old-friends.jpg",
-    caption: "Catching up with old friends. Greg and Paddy, high school friends from London.",
+    id: "backpacking",
+    src: "/hobby-backpacking.jpg",
+    caption: "Backpacking. This is Timberline Trail, Mt Hood.",
   },
   {
     id: "trick-or-treat",
@@ -47,24 +12,14 @@ const slides = [
     caption: "Trick or treating with my son, Chet (he loves peanut butter on banana)",
   },
   {
-    id: "smores",
-    src: "/hobby-smores.jpg",
-    caption: "S'mores",
+    id: "haleakala",
+    src: "/hobby-haleakala.jpg",
+    caption: "Traveling with friends. Here we're on top of Haleakala.",
   },
   {
-    id: "travel-kids",
-    src: "/hobby-travel-kids.jpg",
-    caption: "Taking the kids new places",
-  },
-  {
-    id: "building-chet",
-    src: "/hobby-building-chet.jpg",
-    caption: "Building things with Chet",
-  },
-  {
-    id: "rice-krispy",
-    src: "/hobby-rice-krispy.jpg",
-    caption: "Making rice krispy treats (Yes, I made that!)",
+    id: "frankie",
+    src: "/hobby-frankie.jpg",
+    caption: "Carb loading with my daughter Frankie",
   },
   {
     id: "triathlon",
@@ -72,9 +27,14 @@ const slides = [
     caption: "Triathlons",
   },
   {
-    id: "haleakala",
-    src: "/hobby-haleakala.jpg",
-    caption: "Traveling with friends. Here we're on top of Haleakala.",
+    id: "travel-kids",
+    src: "/hobby-travel-kids.jpg",
+    caption: "Taking the kids new places",
+  },
+  {
+    id: "horses",
+    src: "/hobby-horses.jpg",
+    caption: "Finding horses with my daughter (she wants one, but I'm not there yet)",
   },
   {
     id: "college-football",
@@ -82,15 +42,55 @@ const slides = [
     caption: "Going to college football games",
   },
   {
-    id: "backpacking",
-    src: "/hobby-backpacking.jpg",
-    caption: "Backpacking. This is Timberline Trail, Mt Hood.",
+    id: "breakfast",
+    src: "/hobby-breakfast.jpg",
+    caption: "Making Saturday breakfast for my kids",
+  },
+  {
+    id: "smores",
+    src: "/hobby-smores.jpg",
+    caption: "S'mores",
+  },
+  {
+    id: "ferry-puzzle",
+    src: "/hobby-ferry-puzzle.jpg",
+    caption: "Doing the puzzles on the WA State ferries",
+  },
+  {
+    id: "building-chet",
+    src: "/hobby-building-chet.jpg",
+    caption: "Building things with Chet",
+  },
+  {
+    id: "old-friends",
+    src: "/hobby-old-friends.jpg",
+    caption: "Catching up with old friends. Greg and Paddy, high school friends from London.",
+  },
+  {
+    id: "leavenworth",
+    src: "/hobby-leavenworth.jpg",
+    caption: "I love magical places; here is Leavenworth on Christmas Eve.",
+  },
+  {
+    id: "rice-krispy",
+    src: "/hobby-rice-krispy.jpg",
+    caption: "Making rice krispy treats (Yes, I made that!)",
+  },
+  {
+    id: "hiking",
+    src: "/hobby-hiking.jpg",
+    caption: "Hiking with my kids",
+  },
+  {
+    id: "bierstadt",
+    src: "/hobby-bierstadt.jpg",
+    caption: "I love art; this is an original from Albert Bierstadt I got to see in DC.",
   },
 ];
 
 export default function HobbiesContent() {
   return (
-    <div className="pt-3">
+    <div className="pt-3 relative">
       <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-1">
         {slides.map((slide) => (
           <div key={slide.id} className="flex-shrink-0 w-52">
@@ -107,6 +107,7 @@ export default function HobbiesContent() {
           </div>
         ))}
       </div>
+      <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#a1c5ce] to-transparent pointer-events-none rounded-r-2xl" />
     </div>
   );
 }
