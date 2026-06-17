@@ -50,6 +50,11 @@ const slides = [
     src: "/hobby-trick-or-treat.jpg",
     caption: "Trick or treating with my son, Chet (he loves peanut butter on banana)",
   },
+  {
+    id: "smores",
+    src: "/hobby-smores.jpg",
+    caption: "S'mores",
+  },
 ];
 
 export default function HobbiesContent() {
