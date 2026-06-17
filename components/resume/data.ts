@@ -22,7 +22,7 @@ export const work: Experience[] = [
     bullets: [
       "Leading all Technology, Product, and GTM for Global Seller Experience programs.",
       "Top 10% performer two consecutive years.",
-      "Technology launches drove $3.5B increase in global multipack sales (~1% of total Amazon GMV).",
+      "Technology launches drove $3.5B increase in global sales.",
     ],
   },
   {
