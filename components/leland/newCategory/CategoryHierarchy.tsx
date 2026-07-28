@@ -40,7 +40,7 @@ export default function CategoryHierarchy() {
         </div>
       </div>
 
-      {/* Compact detail reference — full descriptions preserved for anyone reading closely */}
+      {/* Compact detail reference: full descriptions preserved for anyone reading closely */}
       <dl className="grid sm:grid-cols-2 gap-x-8 gap-y-3 mt-10 pt-8 border-t" style={{ borderColor: LINE }}>
         {subcategories.map((s) => (
           <div key={s.name}>

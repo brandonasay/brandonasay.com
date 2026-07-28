@@ -38,7 +38,7 @@ export default function LelandPage() {
     <main className="min-h-screen print:bg-white print:text-black">
       <div className="max-w-3xl mx-auto px-6 py-20">
         <p className="text-[#8aaf9f] text-xs font-mono tracking-widest uppercase mb-3">
-          Leland — GM, Marketplace Case Response
+          Leland: GM, Marketplace Case Response
         </p>
         <h1 className="text-4xl md:text-5xl font-bold text-[#e8e8e3] tracking-tight mb-4">
           Brandon Asay&apos;s Leland Case Response
