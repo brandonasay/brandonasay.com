@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Subcategories from "@/components/leland/newCategory/Subcategories";
+import CategoryHierarchy from "@/components/leland/newCategory/CategoryHierarchy";
 import Justification from "@/components/leland/newCategory/Justification";
 import Risks from "@/components/leland/newCategory/Risks";
 import Sources from "@/components/leland/newCategory/Sources";
 
 export const metadata: Metadata = {
-  title: "Why Leland's Next Category Should Be Encore Career — Brandon Asay",
+  title: "Leland's New Category: Encore Career — Brandon Asay",
   description:
     "A response to Leland's GM, Marketplace case question: grow existing categories or launch a new one? The recommendation, the data behind it, and the risks.",
 };
@@ -27,7 +27,7 @@ export default function NewCategoryPage() {
             Leland — GM, Marketplace Case Response
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-[#e8e8e3] tracking-tight mb-4">
-            Why Leland&apos;s next category should be Encore Career
+            Leland&apos;s New Category: Encore Career
           </h1>
           <p className="text-[#e8e8e3]/70 text-base leading-relaxed max-w-xl mb-4">
             A response to the case question: with finite resources, grow existing
@@ -82,7 +82,7 @@ export default function NewCategoryPage() {
           <h2 className="text-[#e8e8e3] text-2xl font-bold tracking-tight mb-6">
             Subcategories
           </h2>
-          <Subcategories />
+          <CategoryHierarchy />
         </section>
 
         {/* Why This Wins */}
