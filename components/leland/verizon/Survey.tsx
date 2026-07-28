@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import LelandCard from "@/components/leland/LelandCard";
 import { steps, categories, ResultKey } from "./content";
 
@@ -27,14 +26,6 @@ export default function Survey() {
           </p>
           <h3 className="text-[#222725] text-xl font-bold mb-2">{cat.name}</h3>
           <p className="text-[#222725]/70 leading-relaxed">{cat.description}</p>
-          {cat.link && (
-            <Link
-              href={cat.link.href}
-              className="inline-block mt-4 text-sm text-[#222725] font-medium hover:underline"
-            >
-              {cat.link.label} →
-            </Link>
-          )}
         </LelandCard>
         <div className="flex gap-4">
           {history.length > 1 && (

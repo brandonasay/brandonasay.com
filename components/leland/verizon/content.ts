@@ -7,10 +7,7 @@ export type ResultKey =
   | "fractional"
   | "philanthropy";
 
-export const categories: Record<
-  ResultKey,
-  { name: string; description: string; link?: { href: string; label: string } }
-> = {
+export const categories: Record<ResultKey, { name: string; description: string }> = {
   school: {
     name: "Back to School",
     description:
@@ -34,11 +31,7 @@ export const categories: Record<
   execAdvisory: {
     name: "Executive Advisory & Board Placement",
     description:
-      "Coaching for landing a board seat, a fractional executive role, or an advisory position, the same Encore Career path recommended elsewhere in this case response.",
-    link: {
-      href: "/leland/new-category",
-      label: "See the full Encore Career recommendation",
-    },
+      "Coaching for landing a board seat, a fractional executive role, or an advisory position.",
   },
   fractional: {
     name: "Fractional & Advisory Roles",
