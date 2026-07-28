@@ -19,10 +19,11 @@ const parts = [
   },
   {
     title: "Verizon Deal Execution",
-    description: "A Verizon deal-execution prototype.",
-    href: null,
+    description:
+      "A short branching survey that routes transitioning employees to the right Leland category in three questions or fewer.",
+    href: "/leland/verizon",
     color: "#d8cf6f",
-    live: false,
+    live: true,
   },
   {
     title: "First 30 Days",
