@@ -58,9 +58,6 @@ export default function NewCategoryPage() {
 
         {/* Subcategories */}
         <section className="mb-16">
-          <h2 className="text-[#e8e8e3] text-2xl font-bold tracking-tight mb-6">
-            Subcategories
-          </h2>
           <CategoryHierarchy />
         </section>
 
