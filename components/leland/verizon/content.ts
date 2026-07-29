@@ -52,7 +52,7 @@ export const steps: Record<string, QuestionStep> = {
   pull: {
     prompt: "What's pulling you toward your next chapter?",
     options: [
-      { label: "Learn something new or get credentialed", next: "result:school" },
+      { label: "Get an advanced degree or credential", next: "result:school" },
       { label: "Build or acquire something of my own", next: "buildMode" },
       { label: "Join an organization in some capacity", next: "joinMode" },
       { label: "Give back or contribute beyond myself", next: "result:philanthropy" },
