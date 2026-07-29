@@ -10,9 +10,15 @@ export default function VerizonPage() {
   return (
     <main className="min-h-screen flex items-center">
       <div className="max-w-2xl mx-auto px-6 py-24 w-full">
-        <span className="inline-block text-[#8aaf9f] text-xs font-mono tracking-widest uppercase mb-4 px-3 py-1 rounded-full border border-[#8aaf9f]/30">
-          For Verizon Employees
-        </span>
+        <div className="flex items-center gap-3 mb-6">
+          <span className="text-xl font-bold tracking-tight text-[#e8e8e3]">
+            verizon<span className="text-[#ee0000]">✓</span>
+          </span>
+          <span className="text-[#e8e8e3]/25 text-lg font-light">+</span>
+          <span className="text-xl font-semibold tracking-tight text-[#e8e8e3]">
+            Leland
+          </span>
+        </div>
         <h1 className="text-4xl md:text-5xl font-bold text-[#e8e8e3] tracking-tight mb-4">
           Let&apos;s find your next chapter.
         </h1>
