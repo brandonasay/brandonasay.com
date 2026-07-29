@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import LelandCard from "@/components/leland/LelandCard";
-import { steps, categories, ResultKey } from "./content";
+import { steps, ResultKey } from "./content";
+import CoachBooking from "./CoachBooking";
 
 const COLORS = ["#a1c5ce", "#d8cf6f", "#becf8c", "#abc4ac"];
 
@@ -17,34 +18,16 @@ export default function Survey() {
 
   if (isResult) {
     const resultKey = current.split(":")[1] as ResultKey;
-    const cat = categories[resultKey];
     return (
       <div>
-        <LelandCard color="#e8e8e3" className="mb-6">
-          <p className="text-[#222725]/60 text-xs uppercase tracking-widest font-mono mb-2">
-            Recommended path
-          </p>
-          <h3 className="text-[#222725] text-xl font-bold mb-2">{cat.name}</h3>
-          <p className="text-[#222725]/70 leading-relaxed">{cat.description}</p>
-        </LelandCard>
-        <div className="flex gap-4">
-          {history.length > 1 && (
-            <button
-              type="button"
-              onClick={back}
-              className="text-sm text-[#e8e8e3]/60 hover:text-[#e8e8e3] hover:underline"
-            >
-              ← Back
-            </button>
-          )}
-          <button
-            type="button"
-            onClick={restart}
-            className="text-sm text-[#e8e8e3]/60 hover:text-[#e8e8e3] hover:underline"
-          >
-            Start over
-          </button>
-        </div>
+        <CoachBooking resultKey={resultKey} />
+        <button
+          type="button"
+          onClick={restart}
+          className="mt-6 text-sm text-[#e8e8e3]/60 hover:text-[#e8e8e3] hover:underline"
+        >
+          Start over
+        </button>
       </div>
     );
   }

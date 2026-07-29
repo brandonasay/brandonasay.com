@@ -1,0 +1,373 @@
+import { ResultKey } from "./content";
+
+export type Coach = {
+  name: string;
+  headline: string;
+  bio: string;
+  rating: number;
+  sessions: number;
+  price: string;
+};
+
+export const coaches: Record<ResultKey, Coach[]> = {
+  mba: [
+    {
+      name: "Priya Nandan",
+      headline: "Former MBA Admissions Reader, Wharton",
+      bio: "Read over 2,000 applications and knows exactly what separates a wait-list from an admit.",
+      rating: 4.9,
+      sessions: 210,
+      price: "$150/session",
+    },
+    {
+      name: "Marcus Webb",
+      headline: "MBA, Kellogg. Career Coach",
+      bio: "Helps career-changers build an application narrative that actually holds together.",
+      rating: 4.8,
+      sessions: 140,
+      price: "$130/session",
+    },
+  ],
+  law: [
+    {
+      name: "Elena Cho",
+      headline: "JD, Columbia. Former Admissions Officer",
+      bio: "Spent six years reading law school applications and coaches around the most common rejection reasons.",
+      rating: 4.9,
+      sessions: 180,
+      price: "$160/session",
+    },
+    {
+      name: "David Okafor",
+      headline: "Litigator & LSAT Coach",
+      bio: "Coaches career-changers through the LSAT and a personal statement that stands out.",
+      rating: 4.7,
+      sessions: 95,
+      price: "$120/session",
+    },
+  ],
+  medicine: [
+    {
+      name: "Dr. Sarah Lindqvist",
+      headline: "MD. Former Admissions Committee Member",
+      bio: "Sat on a med school admissions committee for five years and coaches the interview and secondary essays.",
+      rating: 5.0,
+      sessions: 260,
+      price: "$180/session",
+    },
+    {
+      name: "James Park",
+      headline: "MCAT Coach & Pre-Med Advisor",
+      bio: "Guides career-changers through a competitive application without a traditional pre-med background.",
+      rating: 4.8,
+      sessions: 110,
+      price: "$140/session",
+    },
+  ],
+  phd: [
+    {
+      name: "Dr. Renata Silva",
+      headline: "PhD, Stanford. Research Coach",
+      bio: "Helps applicants frame a research agenda that stands out to faculty advisors.",
+      rating: 4.9,
+      sessions: 75,
+      price: "$150/session",
+    },
+    {
+      name: "Tom Bennett",
+      headline: "Former PhD Admissions Committee Member",
+      bio: "Coaches applicants on program fit and a statement of purpose that gets read twice.",
+      rating: 4.7,
+      sessions: 60,
+      price: "$130/session",
+    },
+  ],
+  masters: [
+    {
+      name: "Aisha Rahman",
+      headline: "Graduate Admissions Coach",
+      bio: "Helps working professionals make the case for a career-focused master's program.",
+      rating: 4.8,
+      sessions: 130,
+      price: "$120/session",
+    },
+    {
+      name: "Chris Donovan",
+      headline: "Former Graduate Admissions Reader",
+      bio: "Specializes in translating work experience into a strong application.",
+      rating: 4.7,
+      sessions: 90,
+      price: "$110/session",
+    },
+  ],
+  startBusiness: [
+    {
+      name: "Nadia Bello",
+      headline: "Founder, two exits",
+      bio: "Helps first-time founders go from idea to a validated first version without wasting a year.",
+      rating: 4.9,
+      sessions: 190,
+      price: "$175/session",
+    },
+    {
+      name: "Ryan Katz",
+      headline: "Former Startup Accelerator Mentor",
+      bio: "Coaches early founders on positioning, pricing, and landing the first ten customers.",
+      rating: 4.8,
+      sessions: 150,
+      price: "$150/session",
+    },
+  ],
+  acquireBusiness: [
+    {
+      name: "Wei Chen",
+      headline: "Search Fund Operator",
+      bio: "Acquired and ran a business through a self-funded search and coaches others through the process.",
+      rating: 4.9,
+      sessions: 85,
+      price: "$200/session",
+    },
+    {
+      name: "Laura Ferraro",
+      headline: "M&A Advisor",
+      bio: "Helps first-time acquirers run diligence and structure financing on a small business purchase.",
+      rating: 4.8,
+      sessions: 70,
+      price: "$190/session",
+    },
+  ],
+  product: [
+    {
+      name: "Devon Marsh",
+      headline: "Former Head of Product, Series C startup",
+      bio: "Coaches PM candidates through case interviews and portfolio reviews.",
+      rating: 4.9,
+      sessions: 240,
+      price: "$160/session",
+    },
+    {
+      name: "Michelle Osei",
+      headline: "Senior PM, ex-Meta",
+      bio: "Helps career-changers break into product management without a traditional background.",
+      rating: 4.8,
+      sessions: 200,
+      price: "$150/session",
+    },
+  ],
+  marketing: [
+    {
+      name: "Grace Kim",
+      headline: "CMO Coach, ex-Unilever",
+      bio: "Coaches marketers on positioning their story for the next-level role.",
+      rating: 4.8,
+      sessions: 160,
+      price: "$140/session",
+    },
+    {
+      name: "Omar Haddad",
+      headline: "Growth Marketing Lead, ex-Airbnb",
+      bio: "Helps candidates translate scrappy marketing wins into a compelling interview narrative.",
+      rating: 4.7,
+      sessions: 120,
+      price: "$130/session",
+    },
+  ],
+  engineering: [
+    {
+      name: "Anya Petrova",
+      headline: "Staff Engineer, ex-Google",
+      bio: "Coaches engineers through system design interviews and leveling conversations.",
+      rating: 4.9,
+      sessions: 230,
+      price: "$170/session",
+    },
+    {
+      name: "Ben Tanaka",
+      headline: "Engineering Manager, ex-Microsoft",
+      bio: "Helps ICs prepare for a jump into engineering leadership.",
+      rating: 4.8,
+      sessions: 150,
+      price: "$150/session",
+    },
+  ],
+  sales: [
+    {
+      name: "Carlos Reyes",
+      headline: "VP Sales, ex-Salesforce",
+      bio: "Coaches sales professionals on landing a bigger book and a bigger title.",
+      rating: 4.8,
+      sessions: 140,
+      price: "$140/session",
+    },
+    {
+      name: "Jenna Ford",
+      headline: "Enterprise AE Coach",
+      bio: "Helps candidates tell a number-backed story that lands in final rounds.",
+      rating: 4.7,
+      sessions: 100,
+      price: "$120/session",
+    },
+  ],
+  hr: [
+    {
+      name: "Patricia Nunez",
+      headline: "Former CHRO, mid-market company",
+      bio: "Coaches HR leaders on the jump from generalist to strategic business partner.",
+      rating: 4.8,
+      sessions: 110,
+      price: "$130/session",
+    },
+    {
+      name: "Sam Whitfield",
+      headline: "People Ops Lead, ex-Stripe",
+      bio: "Helps candidates position themselves for a senior HR or People role.",
+      rating: 4.7,
+      sessions: 90,
+      price: "$120/session",
+    },
+  ],
+  legal: [
+    {
+      name: "Rachel Stein",
+      headline: "General Counsel Coach",
+      bio: "Coaches attorneys making the move from firm to in-house.",
+      rating: 4.9,
+      sessions: 95,
+      price: "$170/session",
+    },
+    {
+      name: "Victor Adeyemi",
+      headline: "Employment Attorney",
+      bio: "Helps candidates translate legal experience into a compelling resume for corporate roles.",
+      rating: 4.7,
+      sessions: 70,
+      price: "$150/session",
+    },
+  ],
+  dataScience: [
+    {
+      name: "Ingrid Solberg",
+      headline: "Principal Data Scientist, ex-Netflix",
+      bio: "Coaches candidates through take-home projects and stakeholder-facing interviews.",
+      rating: 4.9,
+      sessions: 175,
+      price: "$160/session",
+    },
+    {
+      name: "Raj Malhotra",
+      headline: "Data Science Manager, ex-Uber",
+      bio: "Helps analysts and engineers reposition themselves as data scientists.",
+      rating: 4.8,
+      sessions: 130,
+      price: "$150/session",
+    },
+  ],
+  it: [
+    {
+      name: "Frank Delgado",
+      headline: "IT Director, ex-large healthcare company",
+      bio: "Coaches candidates through infrastructure and systems interviews.",
+      rating: 4.7,
+      sessions: 80,
+      price: "$120/session",
+    },
+    {
+      name: "Holly Vance",
+      headline: "IT Program Manager",
+      bio: "Helps IT professionals move from support roles into leadership.",
+      rating: 4.6,
+      sessions: 65,
+      price: "$110/session",
+    },
+  ],
+  cybersecurity: [
+    {
+      name: "Marcus Lee",
+      headline: "CISO Coach, ex-JPMorgan",
+      bio: "Coaches security professionals through certification strategy and interview prep.",
+      rating: 4.9,
+      sessions: 100,
+      price: "$170/session",
+    },
+    {
+      name: "Dana Whitfield",
+      headline: "Security Engineering Lead",
+      bio: "Helps candidates break into security from adjacent IT roles.",
+      rating: 4.7,
+      sessions: 75,
+      price: "$140/session",
+    },
+  ],
+  customerSuccess: [
+    {
+      name: "Talia Brooks",
+      headline: "VP Customer Success, ex-HubSpot",
+      bio: "Coaches CS professionals on moving from individual contributor to leadership.",
+      rating: 4.8,
+      sessions: 120,
+      price: "$130/session",
+    },
+    {
+      name: "Miguel Santos",
+      headline: "Customer Success Manager Coach",
+      bio: "Helps candidates tell a retention-and-growth story that lands offers.",
+      rating: 4.7,
+      sessions: 90,
+      price: "$110/session",
+    },
+  ],
+  execAdvisory: [
+    {
+      name: "Robert Hale",
+      headline: "Former Fortune 500 CFO. Board Coach",
+      bio: "Coaches executives through board search processes and governance basics.",
+      rating: 4.9,
+      sessions: 90,
+      price: "$300/session",
+    },
+    {
+      name: "Diane Okonkwo",
+      headline: "Board Member & Executive Coach",
+      bio: "Helps senior leaders build a board-ready bio and land a first seat.",
+      rating: 4.9,
+      sessions: 110,
+      price: "$280/session",
+    },
+  ],
+  fractional: [
+    {
+      name: "Karen Voss",
+      headline: "Fractional COO",
+      bio: "Coaches executives on positioning and pricing a fractional practice.",
+      rating: 4.8,
+      sessions: 70,
+      price: "$220/session",
+    },
+    {
+      name: "Leo Bianchi",
+      headline: "Fractional CMO Coach",
+      bio: "Helps candidates land their first fractional or advisory engagement.",
+      rating: 4.7,
+      sessions: 55,
+      price: "$200/session",
+    },
+  ],
+  philanthropy: [
+    {
+      name: "Dr. Naomi Ellis",
+      headline: "Former Foundation President",
+      bio: "Coaches leaders transitioning into nonprofit board service.",
+      rating: 4.9,
+      sessions: 65,
+      price: "$180/session",
+    },
+    {
+      name: "Harold Voss",
+      headline: "Nonprofit Executive Coach",
+      bio: "Helps candidates translate corporate leadership into foundation or nonprofit roles.",
+      rating: 4.7,
+      sessions: 50,
+      price: "$160/session",
+    },
+  ],
+};
