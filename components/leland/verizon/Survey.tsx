@@ -57,7 +57,11 @@ export default function Survey() {
         Question {history.length} of up to 3
       </p>
       <h3 className="text-[#e8e8e3] text-xl font-semibold mb-6">{step.prompt}</h3>
-      <div className="grid sm:grid-cols-2 gap-3">
+      <div
+        className={`grid sm:grid-cols-2 gap-3 ${
+          step.options.length > 6 ? "md:grid-cols-3" : ""
+        }`}
+      >
         {step.options.map((opt, i) => (
           <button
             key={opt.label}

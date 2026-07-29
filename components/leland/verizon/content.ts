@@ -6,7 +6,16 @@ export type ResultKey =
   | "masters"
   | "startBusiness"
   | "acquireBusiness"
-  | "landRole"
+  | "product"
+  | "marketing"
+  | "engineering"
+  | "sales"
+  | "hr"
+  | "legal"
+  | "dataScience"
+  | "it"
+  | "cybersecurity"
+  | "customerSuccess"
   | "execAdvisory"
   | "fractional"
   | "philanthropy";
@@ -47,10 +56,55 @@ export const categories: Record<ResultKey, { name: string; description: string }
     description:
       "Guidance for search-fund style acquisition: sourcing deals, running diligence, and financing a purchase.",
   },
-  landRole: {
-    name: "Land a New Role",
+  product: {
+    name: "Product",
     description:
-      "Resume, positioning, and interview coaching for landing the next individual-contributor or management role, including Product Management.",
+      "Resume, positioning, and interview coaching for landing your next role in Product Management.",
+  },
+  marketing: {
+    name: "Marketing",
+    description:
+      "Resume, positioning, and interview coaching for landing your next role in Marketing.",
+  },
+  engineering: {
+    name: "Engineering",
+    description:
+      "Resume, positioning, and interview coaching for landing your next role in Engineering.",
+  },
+  sales: {
+    name: "Sales",
+    description:
+      "Resume, positioning, and interview coaching for landing your next role in Sales.",
+  },
+  hr: {
+    name: "Human Resources",
+    description:
+      "Resume, positioning, and interview coaching for landing your next role in Human Resources.",
+  },
+  legal: {
+    name: "Legal",
+    description:
+      "Resume, positioning, and interview coaching for landing your next role in Legal.",
+  },
+  dataScience: {
+    name: "Data Science",
+    description:
+      "Resume, positioning, and interview coaching for landing your next role in Data Science.",
+  },
+  it: {
+    name: "IT",
+    description:
+      "Resume, positioning, and interview coaching for landing your next role in IT.",
+  },
+  cybersecurity: {
+    name: "Cybersecurity",
+    description:
+      "Resume, positioning, and interview coaching for landing your next role in Cybersecurity.",
+  },
+  customerSuccess: {
+    name: "Customer Success",
+    description:
+      "Resume, positioning, and interview coaching for landing your next role in Customer Success.",
   },
   execAdvisory: {
     name: "Executive Advisory & Board Placement",
@@ -106,17 +160,20 @@ export const steps: Record<string, QuestionStep> = {
     ],
   },
   joinMode: {
-    prompt: "A full-time operating role, or something more flexible and advisory?",
+    prompt: "What kind of role are you looking for?",
     options: [
-      { label: "Full-time operating role", next: "joinLevel" },
-      { label: "Flexible or advisory", next: "result:fractional" },
-    ],
-  },
-  joinLevel: {
-    prompt: "Individual contributor or management track, or executive and board level?",
-    options: [
-      { label: "Individual contributor or management", next: "result:landRole" },
+      { label: "Product", next: "result:product" },
+      { label: "Marketing", next: "result:marketing" },
+      { label: "Engineering", next: "result:engineering" },
+      { label: "Sales", next: "result:sales" },
+      { label: "Human Resources", next: "result:hr" },
+      { label: "Legal", next: "result:legal" },
+      { label: "Data Science", next: "result:dataScience" },
+      { label: "IT", next: "result:it" },
+      { label: "Cybersecurity", next: "result:cybersecurity" },
+      { label: "Customer Success", next: "result:customerSuccess" },
       { label: "Executive or board level", next: "result:execAdvisory" },
+      { label: "Flexible or advisory", next: "result:fractional" },
     ],
   },
 };
