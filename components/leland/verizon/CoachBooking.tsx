@@ -165,6 +165,20 @@ export default function CoachBooking({ resultKey }: { resultKey: ResultKey }) {
           ›
         </button>
       </div>
+
+      <div className="mt-8 pt-6 border-t border-[#e8e8e3]/10 text-center">
+        <p className="text-[#e8e8e3]/60 text-sm mb-3">
+          Not seeing what you&apos;re looking for?
+        </p>
+        <a
+          href="https://leland.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block text-sm font-medium rounded-lg px-5 py-2.5 border border-[#e8e8e3]/20 text-[#e8e8e3] hover:bg-[#e8e8e3]/10 transition-colors"
+        >
+          Browse all Leland coaches
+        </a>
+      </div>
     </div>
   );
 }
