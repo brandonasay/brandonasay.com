@@ -3,7 +3,7 @@ import Link from "next/link";
 import LelandCard from "@/components/leland/LelandCard";
 
 export const metadata: Metadata = {
-  title: "Brandon Asay's Leland Case Response",
+  title: "Brandon Asay - Leland Case",
   description:
     "Three parts of a single case interview response for the Head of Marketplace / GM, Marketplace role at Leland.",
 };
@@ -37,10 +37,10 @@ export default function LelandPage() {
           Leland: GM, Marketplace Case Response
         </p>
         <h1 className="text-4xl md:text-5xl font-bold text-[#e8e8e3] tracking-tight mb-4">
-          Brandon Asay&apos;s Leland Case Response
+          Brandon Asay - Leland Case
         </h1>
         <p className="text-[#e8e8e3]/70 text-base leading-relaxed max-w-xl mb-12">
-          Three parts of a single case interview response.
+          Time to build 🔥
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
