@@ -27,10 +27,11 @@ const parts = [
   },
   {
     title: "First 30 Days",
-    description: "A first-30-days plan.",
-    href: null,
+    description:
+      "Five parallel tracks across the first 30 days as GM, Marketplace, each running for a different span rather than sequentially.",
+    href: "/leland/thirty-days",
     color: "#becf8c",
-    live: false,
+    live: true,
   },
 ];
 
