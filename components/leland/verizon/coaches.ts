@@ -7,7 +7,11 @@ export type Coach = {
   rating: number;
   sessions: number;
   price: string;
+  photo: string;
 };
+
+const woman = (i: number) => `https://randomuser.me/api/portraits/women/${i}.jpg`;
+const man = (i: number) => `https://randomuser.me/api/portraits/men/${i}.jpg`;
 
 export const coaches: Record<ResultKey, Coach[]> = {
   mba: [
@@ -18,6 +22,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 210,
       price: "$150/session",
+      photo: woman(0),
     },
     {
       name: "Marcus Webb",
@@ -26,6 +31,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 140,
       price: "$130/session",
+      photo: man(0),
     },
   ],
   law: [
@@ -36,6 +42,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 180,
       price: "$160/session",
+      photo: woman(1),
     },
     {
       name: "David Okafor",
@@ -44,6 +51,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 95,
       price: "$120/session",
+      photo: man(1),
     },
   ],
   medicine: [
@@ -54,6 +62,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 5.0,
       sessions: 260,
       price: "$180/session",
+      photo: woman(2),
     },
     {
       name: "James Park",
@@ -62,6 +71,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 110,
       price: "$140/session",
+      photo: man(2),
     },
   ],
   phd: [
@@ -72,6 +82,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 75,
       price: "$150/session",
+      photo: woman(3),
     },
     {
       name: "Tom Bennett",
@@ -80,6 +91,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 60,
       price: "$130/session",
+      photo: man(3),
     },
   ],
   masters: [
@@ -90,6 +102,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 130,
       price: "$120/session",
+      photo: woman(4),
     },
     {
       name: "Chris Donovan",
@@ -98,6 +111,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 90,
       price: "$110/session",
+      photo: man(4),
     },
   ],
   startBusiness: [
@@ -108,6 +122,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 190,
       price: "$175/session",
+      photo: woman(5),
     },
     {
       name: "Ryan Katz",
@@ -116,6 +131,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 150,
       price: "$150/session",
+      photo: man(5),
     },
   ],
   acquireBusiness: [
@@ -126,6 +142,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 85,
       price: "$200/session",
+      photo: man(6),
     },
     {
       name: "Laura Ferraro",
@@ -134,6 +151,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 70,
       price: "$190/session",
+      photo: woman(6),
     },
   ],
   product: [
@@ -144,6 +162,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 240,
       price: "$160/session",
+      photo: man(7),
     },
     {
       name: "Michelle Osei",
@@ -152,6 +171,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 200,
       price: "$150/session",
+      photo: woman(7),
     },
   ],
   marketing: [
@@ -162,6 +182,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 160,
       price: "$140/session",
+      photo: woman(8),
     },
     {
       name: "Omar Haddad",
@@ -170,6 +191,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 120,
       price: "$130/session",
+      photo: man(8),
     },
   ],
   engineering: [
@@ -180,6 +202,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 230,
       price: "$170/session",
+      photo: woman(9),
     },
     {
       name: "Ben Tanaka",
@@ -188,6 +211,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 150,
       price: "$150/session",
+      photo: man(9),
     },
   ],
   sales: [
@@ -198,6 +222,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 140,
       price: "$140/session",
+      photo: man(10),
     },
     {
       name: "Jenna Ford",
@@ -206,6 +231,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 100,
       price: "$120/session",
+      photo: woman(10),
     },
   ],
   hr: [
@@ -216,6 +242,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 110,
       price: "$130/session",
+      photo: woman(11),
     },
     {
       name: "Sam Whitfield",
@@ -224,6 +251,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 90,
       price: "$120/session",
+      photo: man(11),
     },
   ],
   legal: [
@@ -234,6 +262,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 95,
       price: "$170/session",
+      photo: woman(12),
     },
     {
       name: "Victor Adeyemi",
@@ -242,6 +271,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 70,
       price: "$150/session",
+      photo: man(12),
     },
   ],
   dataScience: [
@@ -252,6 +282,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 175,
       price: "$160/session",
+      photo: woman(13),
     },
     {
       name: "Raj Malhotra",
@@ -260,6 +291,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 130,
       price: "$150/session",
+      photo: man(13),
     },
   ],
   it: [
@@ -270,6 +302,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 80,
       price: "$120/session",
+      photo: man(14),
     },
     {
       name: "Holly Vance",
@@ -278,6 +311,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.6,
       sessions: 65,
       price: "$110/session",
+      photo: woman(14),
     },
   ],
   cybersecurity: [
@@ -288,6 +322,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 100,
       price: "$170/session",
+      photo: man(15),
     },
     {
       name: "Dana Whitfield",
@@ -296,6 +331,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 75,
       price: "$140/session",
+      photo: woman(15),
     },
   ],
   customerSuccess: [
@@ -306,6 +342,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 120,
       price: "$130/session",
+      photo: woman(16),
     },
     {
       name: "Miguel Santos",
@@ -314,6 +351,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 90,
       price: "$110/session",
+      photo: man(16),
     },
   ],
   execAdvisory: [
@@ -324,6 +362,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 90,
       price: "$300/session",
+      photo: man(17),
     },
     {
       name: "Diane Okonkwo",
@@ -332,6 +371,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 110,
       price: "$280/session",
+      photo: woman(17),
     },
   ],
   fractional: [
@@ -342,6 +382,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.8,
       sessions: 70,
       price: "$220/session",
+      photo: woman(18),
     },
     {
       name: "Leo Bianchi",
@@ -350,6 +391,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 55,
       price: "$200/session",
+      photo: man(18),
     },
   ],
   philanthropy: [
@@ -360,6 +402,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.9,
       sessions: 65,
       price: "$180/session",
+      photo: woman(19),
     },
     {
       name: "Harold Voss",
@@ -368,6 +411,7 @@ export const coaches: Record<ResultKey, Coach[]> = {
       rating: 4.7,
       sessions: 50,
       price: "$160/session",
+      photo: man(19),
     },
   ],
 };
