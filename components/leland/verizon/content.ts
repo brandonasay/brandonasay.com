@@ -1,5 +1,9 @@
 export type ResultKey =
-  | "school"
+  | "mba"
+  | "law"
+  | "medicine"
+  | "phd"
+  | "masters"
   | "startBusiness"
   | "acquireBusiness"
   | "landRole"
@@ -8,10 +12,30 @@ export type ResultKey =
   | "philanthropy";
 
 export const categories: Record<ResultKey, { name: string; description: string }> = {
-  school: {
-    name: "Back to School",
+  mba: {
+    name: "MBA",
     description:
-      "Application strategy and admissions coaching for an MBA or graduate program built around your goals.",
+      "Application strategy and admissions coaching for a full-time, part-time, or executive MBA program built around your goals.",
+  },
+  law: {
+    name: "Law School",
+    description:
+      "Application strategy and admissions coaching for law school, from choosing target schools to the personal statement.",
+  },
+  medicine: {
+    name: "Medical School",
+    description:
+      "Application strategy and admissions coaching for medical school, including the personal statement and interview prep.",
+  },
+  phd: {
+    name: "PhD / Doctoral Program",
+    description:
+      "Guidance on choosing a program, framing your research interests, and building a competitive doctoral application.",
+  },
+  masters: {
+    name: "Master's Program",
+    description:
+      "Application strategy and admissions coaching for a professional master's program built around your goals.",
   },
   startBusiness: {
     name: "Start a Business",
@@ -52,10 +76,26 @@ export const steps: Record<string, QuestionStep> = {
   pull: {
     prompt: "What's pulling you toward your next chapter?",
     options: [
-      { label: "Get an advanced degree or credential", next: "result:school" },
+      { label: "Get an advanced degree or credential", next: "degreeType" },
       { label: "Build or acquire something of my own", next: "buildMode" },
       { label: "Join an organization in some capacity", next: "joinMode" },
       { label: "Give back or contribute beyond myself", next: "result:philanthropy" },
+    ],
+  },
+  degreeType: {
+    prompt: "What kind of program are you thinking about?",
+    options: [
+      { label: "MBA", next: "result:mba" },
+      { label: "Law school", next: "result:law" },
+      { label: "Medical school", next: "result:medicine" },
+      { label: "A master's or doctoral program", next: "doctoralType" },
+    ],
+  },
+  doctoralType: {
+    prompt: "A research-focused doctorate, or a professional master's program?",
+    options: [
+      { label: "A research doctorate (PhD)", next: "result:phd" },
+      { label: "A professional master's program", next: "result:masters" },
     ],
   },
   buildMode: {
