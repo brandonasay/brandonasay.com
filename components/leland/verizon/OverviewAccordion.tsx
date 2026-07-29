@@ -1,18 +1,51 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import LelandCard from "@/components/leland/LelandCard";
 
 const COLORS = ["#a1c5ce", "#d8cf6f", "#becf8c", "#abc4ac"];
 
-const elements = [
+function EmailPreview() {
+  return (
+    <div className="bg-[#e8e8e3] rounded-xl p-5 text-[#222725] text-sm leading-relaxed">
+      <p className="mb-4">Hi [firstname],</p>
+      <p className="mb-4">
+        As part of your Verizon transition benefits, you now have access to a
+        free 1:1 session with a vetted career coach through Leland. Resume
+        help, interview prep, exploring a new path; whatever you need right
+        now, there&apos;s a coach on Leland for it.
+      </p>
+      <p className="mb-5">
+        Let Leland cover lunch too: use the link below to book your coaching
+        session and you&apos;ll receive a DoorDash gift card.
+      </p>
+      <Link
+        href="/leland/verizon/portal"
+        className="inline-block mb-5 text-center text-sm font-medium rounded-lg px-5 py-2.5 bg-[#222725] text-[#e8e8e3] hover:bg-[#222725]/85 transition-colors"
+      >
+        Find your coach →
+      </Link>
+      <p className="mb-4">
+        This benefit is available to you now for no cost. Questions? Just
+        reply to this email.
+      </p>
+      <p className="text-[#222725]/60">— The Verizon People Team</p>
+    </div>
+  );
+}
+
+type Element = {
+  title: string;
+  body?: string[];
+  content?: ReactNode;
+  cta?: { label: string; href: string };
+};
+
+const elements: Element[] = [
   {
     title: "Email Comms",
-    body: [
-      "A two-email sequence launches the benefit. The first goes out under Verizon's own severance and transition communications, introducing Leland coaching as part of the package and linking straight to the portal. The second is a short reminder five to seven days later for anyone who hasn't opened the portal yet.",
-      "Two emails, not five: this is a population going through a layoff, and a heavier drip risks reading as tone-deaf rather than helpful.",
-    ],
+    content: <EmailPreview />,
   },
   {
     title: "Custom Portal",
@@ -67,21 +100,27 @@ export default function OverviewAccordion() {
 
             {isOpen && (
               <div className="mt-4 space-y-3">
-                {el.body.map((p) => (
-                  <p
-                    key={p}
-                    className="text-[#222725]/80 text-sm leading-relaxed"
-                  >
-                    {p}
-                  </p>
-                ))}
-                {el.cta && (
-                  <Link
-                    href={el.cta.href}
-                    className="inline-block mt-2 text-center text-sm font-medium rounded-lg px-5 py-2.5 bg-[#222725] text-[#e8e8e3] hover:bg-[#222725]/85 transition-colors"
-                  >
-                    {el.cta.label}
-                  </Link>
+                {el.content ? (
+                  el.content
+                ) : (
+                  <>
+                    {el.body?.map((p) => (
+                      <p
+                        key={p}
+                        className="text-[#222725]/80 text-sm leading-relaxed"
+                      >
+                        {p}
+                      </p>
+                    ))}
+                    {el.cta && (
+                      <Link
+                        href={el.cta.href}
+                        className="inline-block mt-2 text-center text-sm font-medium rounded-lg px-5 py-2.5 bg-[#222725] text-[#e8e8e3] hover:bg-[#222725]/85 transition-colors"
+                      >
+                        {el.cta.label}
+                      </Link>
+                    )}
+                  </>
                 )}
               </div>
             )}
