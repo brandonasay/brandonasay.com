@@ -21,15 +21,9 @@ export default function ThirtyDaysPage() {
         <p className="text-[#8aaf9f] text-xs font-mono tracking-widest uppercase mt-6 mb-3">
           Leland: GM, Marketplace Case Response
         </p>
-        <h1 className="text-4xl md:text-5xl font-bold text-[#e8e8e3] tracking-tight mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#e8e8e3] tracking-tight mb-12">
           First 30 Days as GM, Marketplace
         </h1>
-        <p className="text-[#e8e8e3]/70 text-base leading-relaxed max-w-xl mb-12">
-          Five tracks running in parallel across the first 30 days, each for
-          a different span, not a sequential 30-60-90 plan. Tap any track
-          for the question it answers, the key actions, and the proof by
-          Day 30.
-        </p>
 
         <Timeline />
 
