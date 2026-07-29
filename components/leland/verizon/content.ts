@@ -131,7 +131,7 @@ export const steps: Record<string, QuestionStep> = {
     prompt: "What's pulling you toward your next chapter?",
     options: [
       { label: "Get an advanced degree or credential", next: "degreeType" },
-      { label: "Build or acquire something of my own", next: "buildMode" },
+      { label: "Start or acquire a small business", next: "buildMode" },
       { label: "Join an organization in some capacity", next: "joinMode" },
       { label: "Give back or contribute beyond myself", next: "result:philanthropy" },
     ],
@@ -153,10 +153,10 @@ export const steps: Record<string, QuestionStep> = {
     ],
   },
   buildMode: {
-    prompt: "Starting something new, or acquiring something that already exists?",
+    prompt: "Starting a new small business, or acquiring one that already exists?",
     options: [
-      { label: "Starting something new", next: "result:startBusiness" },
-      { label: "Acquiring something that exists", next: "result:acquireBusiness" },
+      { label: "Starting a new small business", next: "result:startBusiness" },
+      { label: "Acquiring an existing small business", next: "result:acquireBusiness" },
     ],
   },
   joinMode: {
