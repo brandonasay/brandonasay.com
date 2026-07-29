@@ -31,14 +31,14 @@ const man = (i: number) => `https://randomuser.me/api/portraits/men/${i}.jpg`;
 // Each category gets a 5-index window (offset..offset+4) into the 100-name
 // pools, so all 20 categories draw from 100 unique women's names/photos and
 // 100 unique men's names/photos with no overlap.
-function buildCategory(offset: number, roles: string[], bio: string): Coach[] {
+function buildCategory(offset: number, roles: string[], bios: string[]): Coach[] {
   const list: Coach[] = [];
   for (let i = 0; i < 5; i++) {
     const idx = offset + i;
     list.push({
       name: WOMEN_NAMES[idx],
       headline: roles[i * 2],
-      bio,
+      bio: bios[i * 2],
       rating: Math.round((4.6 + ((idx % 4) * 0.1)) * 10) / 10,
       sessions: 45 + ((idx * 13) % 220),
       photo: woman(idx),
@@ -46,7 +46,7 @@ function buildCategory(offset: number, roles: string[], bio: string): Coach[] {
     list.push({
       name: MEN_NAMES[idx],
       headline: roles[i * 2 + 1],
-      bio,
+      bio: bios[i * 2 + 1],
       rating: Math.round((4.6 + (((idx + 2) % 4) * 0.1)) * 10) / 10,
       sessions: 45 + (((idx + 7) * 11) % 220),
       photo: man(idx),
@@ -70,7 +70,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Former Admissions Reader, Tuck",
       "MBA, Ross. Application Strategist",
     ],
-    "Helps you build an MBA application and admit strategy that actually holds together."
+    [
+      "Focuses on turning your work experience into a clear, differentiated candidacy.",
+      "Specializes in behavioral interview prep and storytelling.",
+      "Helps you choose the right schools and build a realistic target list.",
+      "Coaches the \"why MBA, why now\" narrative until it actually lands.",
+      "Runs mock interviews modeled on real admissions committee questions.",
+      "Helps career-changers connect past experience to future goals convincingly.",
+      "Specializes in essay editing that keeps your voice, not theirs.",
+      "Coaches reapplicants on what to fix the second time around.",
+      "Helps you build a resume that reads clearly to a non-technical reader.",
+      "Focuses on waitlist strategy and how to respond if you land there.",
+    ]
   ),
   law: buildCategory(
     5,
@@ -86,7 +97,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Former Admissions Reader, Duke Law",
       "JD, UVA. Career Changer Coach",
     ],
-    "Coaches you through the LSAT, personal statement, and target school strategy."
+    [
+      "Coaches LSAT strategy tailored to your specific score gaps.",
+      "Specializes in personal statements that don't sound like everyone else's.",
+      "Helps you build a target list balanced across reach and safety schools.",
+      "Runs mock interviews for schools that require them.",
+      "Coaches career-changers on framing non-legal experience convincingly.",
+      "Focuses on addenda: how to explain a dip in your record.",
+      "Helps you decide between early decision and regular admission strategically.",
+      "Specializes in diversity statements that feel authentic, not performative.",
+      "Coaches reapplicants on exactly what to change the second time.",
+      "Helps you evaluate scholarship offers against overall program fit.",
+    ]
   ),
   medicine: buildCategory(
     10,
@@ -102,7 +124,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Former Admissions Committee Member, Harvard Medical School",
       "MD. MCAT & Application Strategist",
     ],
-    "Guides you through a competitive medical school application, from secondaries to interviews."
+    [
+      "Coaches secondary essays so they don't read like copy-paste answers.",
+      "Runs mock interviews modeled on MMI and traditional formats.",
+      "Helps non-traditional applicants build a credible narrative.",
+      "Specializes in CASPer test prep and situational judgment practice.",
+      "Coaches how to talk about clinical experience without sounding rehearsed.",
+      "Helps you build a realistic school list based on your MCAT and GPA.",
+      "Focuses on the personal statement's opening line, because it matters most.",
+      "Coaches reapplicants on what actually needs to change.",
+      "Helps you prep for the \"tell me about yourself\" that starts every interview.",
+      "Specializes in gap-year strategy for applicants who need to strengthen their file.",
+    ]
   ),
   phd: buildCategory(
     15,
@@ -118,7 +151,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "PhD, Michigan. Funding & Fellowship Coach",
       "Former Admissions Committee Member, Cornell",
     ],
-    "Helps you frame a research agenda and statement of purpose that gets read twice."
+    [
+      "Helps you narrow a research interest into something a committee can evaluate.",
+      "Coaches statement of purpose drafts until the argument is airtight.",
+      "Specializes in matching applicants to the right faculty advisors.",
+      "Helps you prep for interviews with prospective advisors.",
+      "Focuses on funding strategy: fellowships, grants, and assistantships.",
+      "Coaches career-changers on framing industry experience as research-relevant.",
+      "Helps you write a writing sample that actually gets read in full.",
+      "Specializes in choosing between competing offers and funding packages.",
+      "Coaches on how to handle a research gap or pivot in your CV.",
+      "Helps you build a realistic list of programs based on fit, not just rank.",
+    ]
   ),
   masters: buildCategory(
     20,
@@ -134,7 +178,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Graduate Program Fit Coach",
       "Former Admissions Reader, UChicago",
     ],
-    "Helps you make the case for a career-focused master's program built around your goals."
+    [
+      "Helps working professionals frame years of experience into a strong narrative.",
+      "Coaches statement of purpose drafts for career-focused programs.",
+      "Specializes in programs that require a portfolio or work sample.",
+      "Helps you choose between part-time and full-time program formats.",
+      "Runs mock interviews for competitive cohort-based programs.",
+      "Coaches career-changers on addressing gaps in prerequisite coursework.",
+      "Focuses on letters of recommendation: who to ask and how.",
+      "Helps you evaluate ROI across programs with different price points.",
+      "Specializes in international applicants navigating US admissions.",
+      "Coaches reapplicants on what to strengthen before trying again.",
+    ]
   ),
   startBusiness: buildCategory(
     25,
@@ -150,7 +205,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Founder, consumer products startup",
       "Startup Coach & Former VC Associate",
     ],
-    "Coaches you from idea to a validated first version without wasting a year."
+    [
+      "Helps you validate an idea before writing a single line of code.",
+      "Coaches early pricing decisions so you don't leave money on the table.",
+      "Specializes in landing your first ten paying customers.",
+      "Helps you decide what to build first and what to cut.",
+      "Coaches founder-market fit: why you, why this, why now.",
+      "Focuses on scrappy customer research before you build anything.",
+      "Helps you build a lean one-page plan instead of a 40-page deck.",
+      "Coaches solo founders on when (and if) to bring on a co-founder.",
+      "Specializes in turning a side project into something fundable.",
+      "Helps you figure out if this is a business or just a good weekend project.",
+    ]
   ),
   acquireBusiness: buildCategory(
     30,
@@ -166,7 +232,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Former Search Fund CEO",
       "Acquisition Financing Advisor",
     ],
-    "Helps you run diligence and structure financing on a small business purchase."
+    [
+      "Coaches you through sourcing off-market deals directly from owners.",
+      "Specializes in running financial diligence without an army of advisors.",
+      "Helps you structure seller financing to bridge a funding gap.",
+      "Coaches first-time buyers on what red flags actually matter.",
+      "Focuses on valuation: how to know if the asking price is fair.",
+      "Helps you build a 100-day post-close operating plan.",
+      "Specializes in SBA loan strategy for small business acquisitions.",
+      "Coaches you through negotiating terms without losing the deal.",
+      "Helps you evaluate whether to keep or replace existing management.",
+      "Focuses on legal structuring: asset purchase versus stock purchase.",
+    ]
   ),
   product: buildCategory(
     35,
@@ -182,7 +259,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "PM Coach & Former Google APM",
       "Product Management Instructor",
     ],
-    "Coaches you through PM case interviews, portfolio reviews, and leveling conversations."
+    [
+      "Runs mock case interviews with real product sense prompts.",
+      "Helps you build a portfolio that shows impact, not just process.",
+      "Coaches metrics-driven storytelling for behavioral rounds.",
+      "Specializes in leveling: is this role actually the right seniority for you.",
+      "Helps engineers and designers reposition themselves as PM candidates.",
+      "Focuses on the \"tell me about a product you'd improve\" question.",
+      "Coaches negotiation once the offer actually lands.",
+      "Helps you translate scrappy 0-to-1 work into a compelling narrative.",
+      "Specializes in technical PM interviews at infrastructure-heavy companies.",
+      "Coaches you on choosing between competing offers, not just landing one.",
+    ]
   ),
   marketing: buildCategory(
     40,
@@ -198,7 +286,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Marketing Consultant & Former CPG Brand Manager",
       "Field Marketing Director, ex-Salesforce",
     ],
-    "Helps you position your story and portfolio for the next-level marketing role."
+    [
+      "Helps you build a portfolio that shows results, not just campaigns.",
+      "Coaches brand marketers translating experience into growth roles, and back.",
+      "Specializes in the analytics side: proving ROI on past campaigns.",
+      "Helps you tell a clear story about a campaign that didn't work.",
+      "Coaches positioning for the jump from IC to marketing management.",
+      "Focuses on personal branding so recruiters find you first.",
+      "Helps you prep for marketing case studies used in final rounds.",
+      "Specializes in translating agency experience into in-house roles.",
+      "Coaches you on negotiating title and scope, not just salary.",
+      "Helps you decide between startup speed and enterprise scale.",
+    ]
   ),
   engineering: buildCategory(
     45,
@@ -214,7 +313,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Engineering Coach & Former Apple SWE",
       "Distinguished Engineer, ex-IBM",
     ],
-    "Coaches you through system design interviews and the jump into engineering leadership."
+    [
+      "Runs mock system design interviews at the level you're targeting.",
+      "Coaches behavioral rounds so technical wins land as leadership stories.",
+      "Helps you decide between staying an IC and moving into management.",
+      "Specializes in interview prep for infrastructure and platform roles.",
+      "Coaches you on negotiating level and equity, not just base salary.",
+      "Helps you build a portfolio README that a hiring manager will actually read.",
+      "Focuses on the \"walk me through a system you built\" question.",
+      "Coaches career-changers from bootcamp grad to first engineering offer.",
+      "Specializes in interview prep for companies with unusual interview loops.",
+      "Helps you evaluate competing offers beyond just comp.",
+    ]
   ),
   sales: buildCategory(
     50,
@@ -230,7 +340,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "SDR Manager, ex-Snowflake",
       "Chief Revenue Officer Coach",
     ],
-    "Helps you tell a number-backed story that lands offers in final rounds."
+    [
+      "Coaches you on building a number-backed story from your best quarter.",
+      "Helps you translate SMB sales experience into enterprise-ready positioning.",
+      "Specializes in interviewing for quota-carrying roles at larger companies.",
+      "Coaches negotiation of OTE, not just base.",
+      "Helps you build a 30-60-90 day plan that impresses hiring managers.",
+      "Focuses on the pitch: how you'd sell their product back to them.",
+      "Coaches SDRs and BDRs on the jump to closing roles.",
+      "Specializes in positioning a non-quota background for a sales role.",
+      "Helps you evaluate comp plans and territory before you sign.",
+      "Coaches you on handling the \"why are you leaving\" question cleanly.",
+    ]
   ),
   hr: buildCategory(
     55,
@@ -246,7 +367,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Chief People Officer Coach",
       "Recruiting Lead, ex-Meta",
     ],
-    "Coaches you on the jump from HR generalist to strategic business partner."
+    [
+      "Coaches the jump from HR generalist to strategic business partner.",
+      "Specializes in positioning People Ops experience for bigger scope.",
+      "Helps you build a case study on a program you actually ran.",
+      "Coaches you on the data side: proving impact with real numbers.",
+      "Focuses on interview prep for total rewards and comp roles.",
+      "Helps recruiters reposition themselves into broader HR leadership.",
+      "Coaches you on handling scenario-based HR interview questions.",
+      "Specializes in the jump from individual contributor to people manager.",
+      "Helps you evaluate a People team's maturity before you join.",
+      "Coaches negotiation for HR leadership roles specifically.",
+    ]
   ),
   legal: buildCategory(
     60,
@@ -262,7 +394,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Litigation Associate Coach",
       "Regulatory Counsel, ex-Amazon",
     ],
-    "Helps you translate legal experience into a compelling case for corporate or in-house roles."
+    [
+      "Coaches the move from law firm associate to in-house counsel.",
+      "Helps you translate litigation experience into a corporate legal narrative.",
+      "Specializes in interview prep for general counsel track roles.",
+      "Coaches you on the billable-hours-to-business-partner mindset shift.",
+      "Focuses on positioning niche practice experience for broader roles.",
+      "Helps you evaluate in-house comp and equity against firm comp.",
+      "Coaches you on the \"why leave a firm\" question convincingly.",
+      "Specializes in compliance and regulatory interview prep.",
+      "Helps you build a portfolio of matters you can actually discuss.",
+      "Coaches negotiation for in-house counsel offers.",
+    ]
   ),
   dataScience: buildCategory(
     65,
@@ -278,7 +421,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Staff Data Scientist, ex-Airbnb",
       "VP Data, ex-Spotify",
     ],
-    "Coaches you through take-home projects and stakeholder-facing data science interviews."
+    [
+      "Runs mock take-home project reviews with real feedback.",
+      "Coaches the stakeholder-facing side: explaining models to non-technical teams.",
+      "Helps analysts reposition themselves as data scientists.",
+      "Specializes in SQL and stats interview prep.",
+      "Coaches you on the \"walk me through a project\" portfolio interview.",
+      "Focuses on translating academic research into industry-ready language.",
+      "Helps you decide between research-heavy and applied DS roles.",
+      "Specializes in interview prep for ML engineering-adjacent roles.",
+      "Coaches negotiation once you have a competing offer in hand.",
+      "Helps you build a portfolio project that doesn't look like a tutorial.",
+    ]
   ),
   it: buildCategory(
     70,
@@ -294,7 +448,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "IT Service Delivery Manager",
       "Former CIO, mid-market company",
     ],
-    "Helps you move from IT support and operations into technology leadership."
+    [
+      "Coaches the move from help desk into infrastructure leadership.",
+      "Specializes in positioning ops experience for IT management roles.",
+      "Helps you build a case for moving from support into architecture.",
+      "Coaches you on the scenario-based questions common in IT interviews.",
+      "Focuses on cloud migration experience as a differentiator.",
+      "Helps you translate certifications into a compelling resume.",
+      "Coaches negotiation for IT leadership and director-level roles.",
+      "Specializes in the jump from individual contributor to IT manager.",
+      "Helps you evaluate an org's tech stack maturity before joining.",
+      "Coaches you on framing vendor management experience for bigger scope.",
+    ]
   ),
   cybersecurity: buildCategory(
     75,
@@ -310,7 +475,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Security Consultant, ex-IBM",
       "VP Security, Series B startup",
     ],
-    "Coaches you through certification strategy and security interview prep."
+    [
+      "Coaches certification strategy: what to get and in what order.",
+      "Helps you translate IT experience into a security-focused resume.",
+      "Specializes in interview prep for SOC analyst to lead roles.",
+      "Coaches the incident response story every interviewer wants to hear.",
+      "Focuses on compliance and risk interview prep.",
+      "Helps you build a home-lab portfolio that actually impresses.",
+      "Coaches negotiation for security engineering and leadership roles.",
+      "Specializes in the jump from generalist IT to dedicated security.",
+      "Helps you prep for scenario-based tabletop exercise interviews.",
+      "Coaches you on framing red-team or blue-team experience clearly.",
+    ]
   ),
   customerSuccess: buildCategory(
     80,
@@ -326,7 +502,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "VP Client Success, ex-Gainsight",
       "Onboarding & Success Lead, ex-Slack",
     ],
-    "Helps you tell a retention-and-growth story that lands customer success offers."
+    [
+      "Coaches a retention-and-growth story backed by real numbers.",
+      "Helps you translate support experience into a CSM narrative.",
+      "Specializes in the jump from IC CSM to team leadership.",
+      "Coaches you on the \"save this account\" scenario question.",
+      "Focuses on positioning churn-reduction wins clearly.",
+      "Helps you build a QBR presentation that shows real command of the account.",
+      "Coaches negotiation for enterprise CSM and CS leadership roles.",
+      "Specializes in onboarding and implementation experience positioning.",
+      "Helps you evaluate a company's CS org maturity before joining.",
+      "Coaches you on framing renewals and upsell experience for bigger scope.",
+    ]
   ),
   execAdvisory: buildCategory(
     85,
@@ -342,7 +529,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Former CMO, Fortune 500 company",
       "Executive Coach & Former CHRO",
     ],
-    "Coaches you through board search processes, governance basics, and a board-ready bio."
+    [
+      "Coaches you through building a board-ready bio from scratch.",
+      "Specializes in navigating competitive board search processes.",
+      "Helps you translate operating experience into governance language.",
+      "Coaches you on the questions a nominating committee actually asks.",
+      "Focuses on landing your first seat, which is always the hardest one.",
+      "Helps you evaluate board opportunities for fit, not just prestige.",
+      "Coaches you on positioning for audit committee versus general board seats.",
+      "Specializes in executive search relationships and how to build them.",
+      "Helps you prep for interviews with a nominating committee chair.",
+      "Coaches negotiation of board compensation and equity.",
+    ]
   ),
   fractional: buildCategory(
     90,
@@ -358,7 +556,18 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Fractional Chief People Officer",
       "Fractional General Counsel Coach",
     ],
-    "Helps you position and price a fractional or advisory practice."
+    [
+      "Coaches you on pricing a fractional practice without underselling it.",
+      "Helps you land your first fractional client through warm outreach.",
+      "Specializes in positioning full-time experience for part-time engagements.",
+      "Coaches you on scoping a fractional engagement so it doesn't sprawl.",
+      "Focuses on building a referral network of other fractional executives.",
+      "Helps you evaluate which clients are worth the equity trade-off.",
+      "Coaches you on managing multiple fractional engagements at once.",
+      "Specializes in the transition from full-time exec to portfolio career.",
+      "Helps you build a simple website and pitch for fractional work.",
+      "Coaches negotiation of retainer versus equity versus hourly structures.",
+    ]
   ),
   philanthropy: buildCategory(
     95,
@@ -374,6 +583,17 @@ export const coaches: Record<ResultKey, Coach[]> = {
       "Former Program Officer, major foundation",
       "Social Impact & Giving Strategy Coach",
     ],
-    "Coaches your transition into nonprofit board service or foundation leadership."
+    [
+      "Coaches you through translating corporate leadership into nonprofit language.",
+      "Specializes in landing your first nonprofit board seat.",
+      "Helps you evaluate which causes actually fit your background.",
+      "Coaches you on the fundraising expectations of board service.",
+      "Focuses on foundation program officer interview prep.",
+      "Helps you build a giving strategy that matches your values and goals.",
+      "Coaches you on the jump from donor to board member to executive.",
+      "Specializes in positioning operating experience for ED-track roles.",
+      "Helps you evaluate a foundation's mission fit before you commit.",
+      "Coaches negotiation for nonprofit executive leadership roles.",
+    ]
   ),
 };
