@@ -11,24 +11,18 @@ export const metadata: Metadata = {
 const parts = [
   {
     title: "New Category Strategy",
-    description:
-      "Should Leland launch a new category or grow an existing one? The recommendation, the data behind it, and the risks.",
     href: "/leland/new-category",
     color: "#a1c5ce",
     live: true,
   },
   {
     title: "Verizon Deal Execution",
-    description:
-      "A short branching survey that routes transitioning employees to the right Leland category in three questions or fewer.",
     href: "/leland/verizon",
     color: "#d8cf6f",
     live: true,
   },
   {
     title: "First 30 Days",
-    description:
-      "Five parallel tracks across the first 30 days as GM, Marketplace, each running for a different span rather than sequentially.",
     href: "/leland/thirty-days",
     color: "#becf8c",
     live: true,
@@ -57,26 +51,18 @@ export default function LelandPage() {
                   color={p.color}
                   className="h-full transition-transform hover:-translate-y-0.5"
                 >
-                  <h2 className="text-[#222725] font-semibold mb-2">
-                    {p.title}
-                  </h2>
-                  <p className="text-[#222725]/70 text-sm leading-relaxed">
-                    {p.description}
-                  </p>
+                  <h2 className="text-[#222725] font-semibold">{p.title}</h2>
                 </LelandCard>
               </Link>
             ) : (
               <div key={p.title} aria-disabled="true">
                 <LelandCard color={p.color} className="h-full opacity-50">
-                  <div className="flex items-center justify-between gap-2 mb-2">
+                  <div className="flex items-center justify-between gap-2">
                     <h2 className="text-[#222725] font-semibold">{p.title}</h2>
                     <span className="shrink-0 text-xs px-2 py-0.5 rounded-full bg-[#222725]/10 text-[#222725]/50">
                       soon
                     </span>
                   </div>
-                  <p className="text-[#222725]/60 text-sm leading-relaxed">
-                    {p.description}
-                  </p>
                 </LelandCard>
               </div>
             )
