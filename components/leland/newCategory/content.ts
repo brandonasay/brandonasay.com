@@ -93,7 +93,7 @@ export const risks = [
       "The best-fit coaches (retiring executives willing to mentor) are still early in their own transition; recruiting enough supply before demand ramps requires lead time this category may not get.",
   },
   {
-    title: "Pricing sensitivity at the high end",
+    title: "Tradition",
     description:
       "Executive-level buyers are used to bespoke, relationship-driven engagements; a marketplace price sheet may feel commoditizing to the exact audience most worth serving.",
   },
