@@ -5,7 +5,7 @@ import { pillars } from "./content";
 
 const TOTAL_DAYS = 30;
 const AXIS_DAYS = [0, 5, 10, 15, 20, 25, 30];
-const TIMELINE_HEIGHT = 900;
+const TIMELINE_HEIGHT = 700;
 
 function darken(hex: string, amount: number) {
   const r = Math.max(0, parseInt(hex.slice(1, 3), 16) - amount);

@@ -11,17 +11,17 @@ export const metadata: Metadata = {
 export default function ThirtyDaysPage() {
   return (
     <main className="min-h-screen">
-      <div className="max-w-4xl mx-auto px-6 py-20">
+      <div className="max-w-4xl mx-auto px-6 py-12">
         <Link
           href="/leland"
           className="text-[#e8e8e3]/50 text-sm hover:text-[#e8e8e3]/80 hover:underline"
         >
           ← Back to case response
         </Link>
-        <p className="text-[#8aaf9f] text-xs font-mono tracking-widest uppercase mt-6 mb-3">
+        <p className="text-[#8aaf9f] text-xs font-mono tracking-widest uppercase mt-4 mb-2">
           Leland: GM, Marketplace Case Response
         </p>
-        <h1 className="text-4xl md:text-5xl font-bold text-[#e8e8e3] tracking-tight mb-12">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#e8e8e3] tracking-tight mb-6">
           First 30 Days as GM, Marketplace
         </h1>
 
