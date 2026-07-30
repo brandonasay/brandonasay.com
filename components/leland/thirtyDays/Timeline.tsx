@@ -18,29 +18,33 @@ export default function Timeline() {
   const [expanded, setExpanded] = useState<string | null>(null);
 
   return (
-    <div className="flex gap-3 overflow-x-auto pb-4">
-      {/* Day axis */}
-      <div
-        className="relative shrink-0 w-12 sticky left-0 z-10 bg-[#222725]"
-        style={{ height: TIMELINE_HEIGHT }}
-      >
-        {AXIS_DAYS.map((d) => (
-          <div
-            key={d}
-            className="absolute left-0 right-0 flex items-center gap-1"
-            style={{ top: `${(d / TOTAL_DAYS) * 100}%` }}
-          >
-            <span className="text-[#e8e8e3]/40 text-xs font-mono">{d}</span>
-            <div className="h-px flex-1 bg-[#e8e8e3]/10" />
-          </div>
-        ))}
-      </div>
+    <div>
+      <p className="text-[#e8e8e3]/50 text-xs font-mono uppercase tracking-widest mb-2 ml-1">
+        Day
+      </p>
+      <div className="flex gap-3 overflow-x-auto pb-4">
+        {/* Day axis */}
+        <div
+          className="relative shrink-0 w-12 sticky left-0 z-10 bg-[#222725]"
+          style={{ height: TIMELINE_HEIGHT }}
+        >
+          {AXIS_DAYS.map((d) => (
+            <div
+              key={d}
+              className="absolute left-0 right-0 flex items-center gap-1"
+              style={{ top: `${(d / TOTAL_DAYS) * 100}%` }}
+            >
+              <span className="text-[#e8e8e3]/40 text-xs font-mono">{d}</span>
+              <div className="h-px flex-1 bg-[#e8e8e3]/10" />
+            </div>
+          ))}
+        </div>
 
-      {/* Pillar tracks */}
-      <div
-        className="flex gap-3 flex-1 min-w-[700px] relative"
-        style={{ height: TIMELINE_HEIGHT }}
-      >
+        {/* Pillar tracks */}
+        <div
+          className="flex gap-3 flex-1 min-w-[700px] relative"
+          style={{ height: TIMELINE_HEIGHT }}
+        >
         {pillars.map((p) => {
           const isExpanded = expanded === p.id;
           const topPct = (p.startDay / TOTAL_DAYS) * 100;
@@ -71,11 +75,8 @@ export default function Timeline() {
                 <h3 className="font-bold text-[#222725] text-sm leading-tight mb-1">
                   {p.name}
                 </h3>
-                <p className="text-[#222725]/60 text-[10px] font-mono uppercase tracking-wide mb-3">
-                  Day {p.startDay}–{p.endDay}
-                </p>
                 <p className="text-[#222725]/80 text-xs leading-snug">
-                  {p.question}
+                  {p.statement}
                 </p>
 
                 {isExpanded && (
@@ -90,20 +91,6 @@ export default function Timeline() {
                         ))}
                       </ul>
                     </div>
-                    <div>
-                      <p className="font-semibold text-[#222725] text-[11px] uppercase tracking-wide mb-1.5">
-                        Proof by Day 30
-                      </p>
-                      <p className="leading-snug">{p.proof}</p>
-                    </div>
-                    {p.connects && (
-                      <div>
-                        <p className="font-semibold text-[#222725] text-[11px] uppercase tracking-wide mb-1.5">
-                          How it connects
-                        </p>
-                        <p className="leading-snug">{p.connects}</p>
-                      </div>
-                    )}
                     <p className="text-[#222725]/50 text-[10px] pt-1">
                       Tap to collapse ↑
                     </p>
@@ -113,6 +100,7 @@ export default function Timeline() {
             </div>
           );
         })}
+        </div>
       </div>
     </div>
   );

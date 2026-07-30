@@ -69,10 +69,10 @@ export default function NewCategoryPage() {
           <Justification />
         </section>
 
-        {/* Risks & Open Questions */}
+        {/* Risks and Headwinds */}
         <section className="mb-16">
           <h2 className="text-[#e8e8e3] text-2xl font-bold tracking-tight mb-6">
-            Risks &amp; Open Questions
+            Risks and Headwinds
           </h2>
           <Risks />
         </section>

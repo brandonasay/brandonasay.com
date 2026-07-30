@@ -68,8 +68,8 @@ const elements: Element[] = [
   {
     title: "Leland+ Conversion",
     body: [
-      "Verizon's sponsorship covers a fixed number of free sessions per employee, not an unlimited benefit.",
       "The real goal of this deal isn't the sponsored sessions themselves, it's converting engaged employees into paying Leland+ members once that sponsorship runs out, turning a one-time enterprise contract into an ongoing, monetizable relationship instead of a pass-through CSR line item.",
+      "After the first session, follow-up outreach is built around what actually happened in it. Each session generates a short summary of the employee's goals and the coach's recommendations, and that summary drives a personalized follow-up, not a generic \"upgrade to Leland+\" email, but a message that references their specific path (the board seat they're chasing, the business they want to start, the program they're applying to) and proposes Leland+ as the way to keep working on exactly that.",
     ],
   },
 ];

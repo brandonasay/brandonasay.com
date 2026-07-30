@@ -92,6 +92,26 @@ export const risks = [
     description:
       "This will likely be a high-price, lower-volume category, not a growth-at-scale one: a complement to (not a replacement for) deeper investment in Leland's existing high-volume categories.",
   },
+  {
+    title: "Coach supply timing",
+    description:
+      "The best-fit coaches (retiring executives willing to mentor) are still early in their own transition; recruiting enough supply before demand ramps requires lead time this category may not get.",
+  },
+  {
+    title: "Pricing sensitivity at the high end",
+    description:
+      "Executive-level buyers are used to bespoke, relationship-driven engagements; a marketplace price sheet may feel commoditizing to the exact audience most worth serving.",
+  },
+  {
+    title: "Higher vetting bar",
+    description:
+      "A bad match for an MBA applicant costs an application cycle; a bad match for someone negotiating a board seat costs real reputation, raising the bar for coach vetting in this category.",
+  },
+  {
+    title: "Measurement lag",
+    description:
+      "Success in board placement or fractional work plays out over months, not weeks, making it harder to show fast, legible progress against a quarterly resourcing ask.",
+  },
 ];
 
 export const sources = [
