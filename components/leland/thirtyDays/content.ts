@@ -18,10 +18,10 @@ export const pillars: Pillar[] = [
     statement:
       "Gain a formidable understanding of Leland's business model, financials, operations, GTM motions, and more.",
     actions: [
-      "Get fluent in the core dashboards (GMV, take rate, category-level conversion, LTV/CAC, coach acceptance and retention).",
-      "Pull category-by-category performance to pressure-test the Encore Career thesis and check for other under-monetized pockets.",
-      "Run 1:1s with every function lead touching the marketplace to learn what's already been tried and why.",
-      "Audit the current enterprise/outplacement pipeline: what's signed, what's stalled, who owns it.",
+      "Dive deep into all available SQL tables, dashboards, and reports. Become an expert on the data and its structure.",
+      "Spend time with each internal stakeholder to the marketplace. What's their perspective. What are they working on. What have they tried, why did it succeed or fail.",
+      "Spend time with each function at Leland; how do they work, what are their priorities?",
+      "Become fluent in our business model and its finances. Where do we make money, where do we lose money, what categories are most profitable, etc.",
     ],
   },
   {
@@ -31,12 +31,14 @@ export const pillars: Pillar[] = [
     endDay: 30,
     color: "#d8cf6f",
     statement:
-      "Build a firsthand understanding of both sides of the marketplace by experiencing it as a customer and shadowing it as supply.",
+      "Become intimately familiar with our users and their needs on both sides of the marketplace: clients and experts.",
     actions: [
-      "Book and complete real sessions as a customer across 2–3 categories.",
-      "Shadow live coaching sessions from the supply side and sit with coach ops.",
-      "Interview a deliberate mix: churned customers, successful customers, top coaches, and coaches who got rejected in vetting.",
-      "Spend time in Leland's existing community/Slack to catch unprompted, organic signal.",
+      "Book and complete sessions as a client across 3 categories",
+      "Interview 15 coaches. Mix of thriving, new, and churned.",
+      "Interview 5 power-customers (5+ sessions)",
+      "Interview 5 churned customers.",
+      "Become a coach and coach a session",
+      "Spend time in communities where organic signals are found (Reddit, LinkedIn, etc.)",
     ],
   },
   {
@@ -45,13 +47,11 @@ export const pillars: Pillar[] = [
     startDay: 5,
     endDay: 30,
     color: "#becf8c",
-    statement:
-      "Earn the trust of the people whose buy-in this plan depends on, before I need to ask for it.",
+    statement: "Earn trust and establish rapport with those I'll be working with.",
     actions: [
-      "Early, recurring 1:1s with the Head of GMs and CEO.",
-      "Real time with coach ops, marketing, and CS, crediting what's already working rather than assuming it's broken.",
-      "Share a point of view early and visibly instead of going quiet for a month.",
-      "Ship one or two small, low-risk wins early to earn credibility before asking for anything bigger.",
+      "Spend time each day with the stakeholders I'll be working with the most. Be curious about their work, how they work, and what they care about. Get to know them personally, not just professionally.",
+      "Ask what people need help with. Help them with it, even if it's not directly related to my role at first.",
+      "Establish an open line of communication and working relationship with each employee. Going from 1.5M employees to 30 is a luxury.",
     ],
   },
   {
@@ -63,10 +63,8 @@ export const pillars: Pillar[] = [
     statement:
       "Establish a shared, trusted scoreboard the org agrees to be held accountable to.",
     actions: [
-      "Define baseline KPIs per category and channel.",
-      "Fix or build the dashboard so it's trusted and used by the team, not just by me.",
-      "Set explicit targets tied to the two live bets, Encore Career validation and the enterprise pilot, so progress is measurable, not anecdotal.",
-      "Socialize the scoreboard with the Head of GMs/CEO before it's presented, not during.",
+      "In partnership with Head of GMs and CEO, define baseline KPIs for the marketplace.",
+      "Build from scratch or adapt existing dashboards to be robust, trusted, and actionable curations of data.",
     ],
   },
   {
@@ -75,13 +73,13 @@ export const pillars: Pillar[] = [
     startDay: 20,
     endDay: 30,
     color: "#a1c5ce",
-    statement:
-      "Turn strategy into an actually-executed pilot with real bookings and revenue, not just a deck.",
+    statement: "No better way to learn than by doing",
     actions: [
-      "Stand up the offer, portal, and two-email sequence designed for the enterprise pilot.",
-      "Confirm enough 1:1 coach capacity across the right specialties to handle expected booking volume.",
-      "Launch the sequence and monitor the funnel in real time.",
-      "Report results back to the enterprise partner mid-campaign to set up the next deal.",
+      "Identify an early observation or idea that has compelling voice of customer or data",
+      "Write the PRD",
+      "Socialize with stakeholders",
+      "Ship it. Experience our development, launch, and test processes end to end.",
+      "Measure and report results to the team, celebrate the win.",
     ],
   },
 ];

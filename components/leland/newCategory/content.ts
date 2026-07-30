@@ -114,6 +114,39 @@ export const risks = [
   },
 ];
 
+export const ignition = [
+  {
+    title: "Recruit a founding coach cohort by hand",
+    description:
+      "Start with 15-20 credentialed coaches recruited directly through warm referrals, not open signup: retired Fortune 500 executives, former board members, and search-firm-adjacent operators who set the quality bar before the marketplace opens broadly.",
+  },
+  {
+    title: "Turn today's coaches into tomorrow's supply",
+    description:
+      "Many of Leland's existing ex-McKinsey/Google/Goldman coaches are themselves approaching this life stage; invite them into the Encore Career coach pool directly rather than recruiting cold.",
+  },
+  {
+    title: "Partner with wealth advisors and RIAs as a demand channel",
+    description:
+      "Financial advisors already have trusted relationships with clients approaching retirement; equip them to refer Encore Career coaching as a value-add, not a hard sell.",
+  },
+  {
+    title: "Go through executive search and board placement firms",
+    description:
+      "These firms see the exact target customer, someone about to retire or already there, constantly; a referral relationship gives Leland demand without having to build the audience from scratch.",
+  },
+  {
+    title: "Run a small invite-only pilot before opening the category",
+    description:
+      "Pair the founding coach cohort with a handpicked group of users from personal networks or existing Leland power users nearing this life stage, generating real reviews and proof points before a public launch.",
+  },
+  {
+    title: "Publish narrow, credible content",
+    description:
+      "A few sharp pieces aimed squarely at this audience (how to land a first board seat, for example) draw organic inbound demand from people already searching for this exact guidance, without needing paid acquisition on day one.",
+  },
+];
+
 export const sources = [
   "https://gitnux.org/baby-boomer-wealth-statistics/",
   "https://natlawreview.com/press-releases/4-million-americans-turn-65-2026-ltc-news-expands-free-tools-aging-and-long",

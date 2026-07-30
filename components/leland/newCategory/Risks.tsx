@@ -9,9 +9,6 @@ export default function Risks() {
         border: "1px solid rgba(216, 207, 111, 0.35)",
       }}
     >
-      <p className="text-[#d8cf6f] text-sm font-medium mb-6">
-        The honest counterpoints, not just the upside case:
-      </p>
       <div className="space-y-6">
         {risks.map((r) => (
           <div key={r.title}>

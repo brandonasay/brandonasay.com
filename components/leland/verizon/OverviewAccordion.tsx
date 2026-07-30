@@ -44,7 +44,7 @@ type Element = {
 
 const elements: Element[] = [
   {
-    title: "Email Comms",
+    title: "Initial Email Comms",
     content: <EmailPreview />,
   },
   {

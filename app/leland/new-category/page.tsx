@@ -3,6 +3,7 @@ import Link from "next/link";
 import CategoryHierarchy from "@/components/leland/newCategory/CategoryHierarchy";
 import Justification from "@/components/leland/newCategory/Justification";
 import Risks from "@/components/leland/newCategory/Risks";
+import Ignition from "@/components/leland/newCategory/Ignition";
 import Sources from "@/components/leland/newCategory/Sources";
 
 export const metadata: Metadata = {
@@ -75,6 +76,19 @@ export default function NewCategoryPage() {
             Risks and Headwinds
           </h2>
           <Risks />
+        </section>
+
+        {/* Ignition */}
+        <section className="mb-16">
+          <h2 className="text-[#e8e8e3] text-2xl font-bold tracking-tight mb-6">
+            Ignition
+          </h2>
+          <p className="text-[#e8e8e3]/70 leading-relaxed mb-6">
+            A few ways to solve the cold start problem: getting both sides of
+            the marketplace, coaches and users, populated and engaged before
+            the category has any of its own momentum.
+          </p>
+          <Ignition />
         </section>
 
         {/* Sources */}
