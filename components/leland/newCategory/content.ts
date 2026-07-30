@@ -83,11 +83,6 @@ export const risks = [
       "This audience doesn't live on LinkedIn or follow the consulting/finance meme accounts that drive much of Leland's current growth; it likely needs new channels (wealth advisors, alumni networks, board search firms as referral partners).",
   },
   {
-    title: "Naming",
-    description:
-      "“Encore Career” is a term a real nonprofit (Encore.org) has used for ~20 years. Not a legal blocker for internal category naming, but worth knowing before any public-facing branding decision.",
-  },
-  {
     title: "Volume vs. prestige",
     description:
       "This will likely be a high-price, lower-volume category, not a growth-at-scale one: a complement to (not a replacement for) deeper investment in Leland's existing high-volume categories.",
