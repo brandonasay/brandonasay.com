@@ -13,7 +13,7 @@ export const pillars: Pillar[] = [
     id: "learn-the-business",
     name: "Learn the Business",
     startDay: 0,
-    endDay: 30,
+    endDay: 15,
     color: "#a1c5ce",
     statement:
       "Gain a formidable understanding of Leland's business model, financials, operations, GTM motions, and more.",
@@ -27,7 +27,7 @@ export const pillars: Pillar[] = [
   {
     id: "deep-user-discovery",
     name: "Deep User Discovery",
-    startDay: 0,
+    startDay: 2,
     endDay: 30,
     color: "#d8cf6f",
     statement:
