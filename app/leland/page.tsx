@@ -49,7 +49,7 @@ export default function LelandPage() {
               <Link key={p.title} href={p.href} className="block">
                 <LelandCard
                   color={p.color}
-                  className="h-full transition-transform hover:-translate-y-0.5"
+                  className="h-full flex items-center justify-center text-center transition-transform hover:-translate-y-0.5"
                 >
                   <h2 className="text-[#222725] font-semibold">{p.title}</h2>
                 </LelandCard>
