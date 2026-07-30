@@ -16,7 +16,7 @@ export default function ThirtyDaysPage() {
           href="/leland"
           className="text-[#e8e8e3]/50 text-sm hover:text-[#e8e8e3]/80 hover:underline"
         >
-          ← Back to case response
+          ← Back to case home
         </Link>
         <p className="text-[#8aaf9f] text-xs font-mono tracking-widest uppercase mt-4 mb-2">
           Leland: GM, Marketplace Case Response
@@ -29,10 +29,10 @@ export default function ThirtyDaysPage() {
 
         <footer className="pt-12 mt-8 border-t border-[#e8e8e3]/10">
           <Link
-            href="/"
+            href="/leland"
             className="text-[#e8e8e3]/50 text-sm hover:text-[#e8e8e3]/80 hover:underline"
           >
-            ← Back to brandonasay.com
+            ← Back to case home
           </Link>
         </footer>
       </div>
