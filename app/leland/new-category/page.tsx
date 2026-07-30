@@ -39,7 +39,7 @@ export default function NewCategoryPage() {
         {/* The Recommendation */}
         <section className="mb-16">
           <h2 className="text-[#e8e8e3] text-2xl font-bold tracking-tight mb-4">
-            The Recommendation: Encore Career
+            New General Category: Encore Career
           </h2>
           <p className="text-[#e8e8e3]/70 leading-relaxed mb-4">
             Coaching for retiring and semi-retiring senior professionals building
