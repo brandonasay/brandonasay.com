@@ -80,7 +80,7 @@ export const risks = [
   {
     title: "Distribution gap",
     description:
-      "This audience doesn't live on LinkedIn or follow the consulting/finance meme accounts that drive much of Leland's current growth; it likely needs new channels (wealth advisors, alumni networks, board search firms as referral partners).",
+      "This audience doesn't live on LinkedIn or follow the consulting/finance channels that drive much of Leland's current growth; it likely needs new channels (wealth advisors, alumni networks, board search firms as referral partners).",
   },
   {
     title: "Volume vs. prestige",
